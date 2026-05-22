@@ -1,7 +1,8 @@
 import { cva } from "class-variance-authority";
 
-import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
+
+import CurrentHashLink from "./currentHashLink";
 
 const animatedLinkVariants = cva("group/action-link inline-flex items-center gap-2 transition-colors duration-300 ease-out", {
   variants: {
@@ -51,10 +52,10 @@ function AnimatedIcon({ icon: Icon, className }) {
 
 export default function AnimatedLink({ href, children, icon, variant, iconClassName, className }) {
   return (
-    <Link href={href} className={cn(animatedLinkVariants({ variant }), className)}>
+    <CurrentHashLink href={href} className={cn(animatedLinkVariants({ variant }), className)}>
       <AnimatedLabel>{children}</AnimatedLabel>
       <AnimatedIcon icon={icon} className={iconClassName} />
-    </Link>
+    </CurrentHashLink>
   );
 }
 
