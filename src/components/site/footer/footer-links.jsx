@@ -21,7 +21,7 @@ export default function FooterLinks({ columns }) {
                   key={`${link.href}-${link.label}`}
                   href={link.href}
                   aria-current={isActive ? "page" : undefined}
-                  className={cn("w-fit transition-colors duration-300 ease-out hover:text-brand-orange", isActive && "text-brand-orange")}
+                  className={cn("w-fit text-white transition-colors duration-300 ease-out hover:text-brand-orange", isActive && "text-brand-orange")}
                 >
                   {link.label}
                 </Link>

@@ -1,20 +1,32 @@
 "use client";
 
 import { Link, usePathname } from "@/i18n/navigation";
+import { routing } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 
+function removeLocalePrefix(pathname) {
+  const [, firstSegment, ...remainingSegments] = pathname.split("/");
+
+  if (!routing.locales.includes(firstSegment)) {
+    return pathname;
+  }
+
+  return `/${remainingSegments.join("/")}`;
+}
+
 export function isActiveLink(pathname, href) {
-  if (href.startsWith("#")) {
+  if (!pathname || href.startsWith("#")) {
     return false;
   }
 
+  const currentPathname = removeLocalePrefix(pathname);
   const linkPathname = href.split("#")[0] || "/";
 
   if (linkPathname === "/") {
-    return pathname === "/";
+    return currentPathname === "/";
   }
 
-  return pathname === linkPathname || pathname.startsWith(`${linkPathname}/`);
+  return currentPathname === linkPathname || currentPathname.startsWith(`${linkPathname}/`);
 }
 
 export default function Navbar({ links, className }) {
