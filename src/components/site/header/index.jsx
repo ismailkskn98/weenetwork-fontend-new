@@ -29,7 +29,7 @@ export default async function Header() {
             <strong className="font-bold">Wee</strong>
             <span className="font-medium">Network</span>
           </span> */}
-          <Image src="/images/logo/Varlık 15500.svg" alt="WeeNetwork logo" width={100} height={100} className="w-18 object-contain sm:w-20" />
+          <Image src="/images/logo/Varlık 15500.svg" alt="WeeNetwork logo" width={100} height={100} className="w-16 object-contain sm:w-20" />
         </Link>
         <Navbar links={navLinks} className="hidden lg:flex" />
         <div className="flex items-center gap-1.5 sm:gap-2">
