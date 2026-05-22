@@ -1,8 +1,11 @@
 "use client";
 
-import { isActiveLink } from "@/components/site/header/navbar";
 import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
+
+function isActiveFooterLink(pathname, href) {
+  return !href.startsWith("#") && pathname === href;
+}
 
 export default function FooterLinks({ columns }) {
   const pathname = usePathname();
@@ -14,14 +17,14 @@ export default function FooterLinks({ columns }) {
           <h2 className="text-xs font-medium text-white/55">{column.title}</h2>
           <div className="mt-4 flex flex-col gap-3 text-sm">
             {column.links.map((link) => {
-              const isActive = isActiveLink(pathname, link.href);
+              const isActive = isActiveFooterLink(pathname, link.href);
 
               return (
                 <Link
                   key={`${link.href}-${link.label}`}
                   href={link.href}
                   aria-current={isActive ? "page" : undefined}
-                  className={cn("w-fit text-white transition-colors duration-300 ease-out hover:text-brand-orange", isActive && "text-brand-orange")}
+                  className={cn("w-fit transition-colors duration-300 ease-out hover:text-brand-orange!", isActive ? "text-brand-orange!" : "text-white")}
                 >
                   {link.label}
                 </Link>
