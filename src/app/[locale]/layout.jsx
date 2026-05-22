@@ -7,6 +7,9 @@ import { routing } from "@/i18n/routing";
 
 import "../globals.css";
 
+const siteUrl = "https://weenetwork.com";
+const iconUrl = "/images/logo/Varl%C4%B1k%2018500.png";
+
 const plusJakartaSans = localFont({
   src: [
     {
@@ -129,7 +132,17 @@ const notoSansGeorgian = localFont({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://weenetwork.com"),
+  metadataBase: new URL(siteUrl),
+  applicationName: "WeeNetwork",
+  icons: {
+    icon: [{ url: iconUrl, type: "image/png" }],
+    shortcut: [iconUrl],
+    apple: [{ url: iconUrl, type: "image/png" }],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export function generateStaticParams() {

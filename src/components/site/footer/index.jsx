@@ -107,8 +107,8 @@ export default async function Footer() {
 
             <div>
               <h2 className="text-xs font-medium text-white/55">{translations("phone")}</h2>
-              <a href="tel:+902125550123" className="mt-3 block text-sm transition-colors duration-300 ease-out hover:text-brand-orange">
-                +90 (212) 555 0123
+              <a href="tel:+908503020731" className="mt-3 block text-sm transition-colors duration-300 ease-out hover:text-brand-orange">
+                +90 (850) 302 0731
               </a>
             </div>
           </div>
