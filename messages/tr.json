@@ -1,0 +1,139 @@
+{
+  "Seo": {
+    "home": {
+      "title": "WeeNetwork | Dijital Kartvizitler, QR Menüler ve Akıllı Kataloglar",
+      "description": "WeeCard, WeeMenu ve WeeCatalog ile işletmenizi tek bir modern ekosistemde dijital olarak bağlayın.",
+      "keywords": ["dijital kartvizit", "QR menü", "dijital katalog", "NFC kartvizit", "WeeNetwork"]
+    }
+  },
+  "Navigation": {
+    "about": "Hakkımızda",
+    "blog": "Blog",
+    "weeMenu": "WeeMenu",
+    "weeCard": "WeeCard",
+    "weeCatalog": "WeeCatalog",
+    "faq": "SSS",
+    "menu": "Menü",
+    "email": "info@weenetwork.com"
+  },
+  "Home": {
+    "hero": {
+      "eyebrowTitle": "QR ve NFC Destekli",
+      "eyebrowText": "Dijital Kimlik Platformu",
+      "titleStart": "İşletmenizin Dijital",
+      "titleMiddle": "Bağlantı İçin İhtiyacı",
+      "titleAccent": "Olan Her Şey.",
+      "description": "Dijital kartvizitler, QR menüler ve akıllı kataloglar tek bir modern ekosistemde buluşur.",
+      "videoButton": "Videoyu İzle",
+      "solutionsButton": "Çözümleri Keşfet"
+    },
+    "solutions": {
+      "label": "Dijital Çözümler",
+      "titleFirst": "Üç Güçlü Çözüm.",
+      "titleSecond": "Birbirine Bağlı Tek Ekosistem.",
+      "description": "İşletmenizin ihtiyaç duyduğu ürünleri seçin ve tüm dijital deneyimleri WeeNetwork ile yönetin.",
+      "learnMore": "Detayları Gör",
+      "weeCard": {
+        "title": "WeeCard",
+        "subtitle": "Dijital Kartvizit",
+        "description": "İletişim bilgilerinizi QR ve NFC teknolojisiyle anında paylaşın."
+      },
+      "weeMenu": {
+        "title": "WeeMenu",
+        "subtitle": "QR Menü Platformu",
+        "description": "Baskı maliyeti olmadan restoran menülerinizi oluşturun ve yönetin."
+      },
+      "weeCatalog": {
+        "title": "WeeCatalog",
+        "subtitle": "Dijital Ürün Kataloğu",
+        "description": "Ürünlerinizi modern bir katalog deneyimiyle çevrim içi sunun."
+      }
+    },
+    "about": {
+      "label": "Tek Çatı Altında",
+      "content": "İşletmeler için modern <digitalTools>dijital araçları</digitalTools> tek yerde bir araya getiriyoruz. Dijital kartvizitlerden QR destekli menülere ve etkileşimli ürün vitrinlerine kadar her platform, işletmelerin kendilerini çevrim içi ortamda daha etkili sunabilmesi için tasarlandı. Her servis kendi <features>özellikleri ve fiyatlandırmasıyla</features> <icon></icon> bağımsız çalışır ve tüm Wee ürün ailesini keşfetmeyi kolaylaştırır."
+    },
+    "products": {
+      "label": "Servisler",
+      "title": "Dijital Bağlantı İçin İhtiyacınız Olan Her Şey",
+      "description": "İlk etkileşimden günlük operasyonlara kadar WeeNetwork dijital temas noktalarınızı net tutar.",
+      "weeCard": {
+        "subtitle": "Dijital Kartvizit",
+        "description": "Modern bir dijital kartvizit deneyimiyle iletişim bilgilerinizi anında paylaşın. Birden fazla kart oluşturun, potansiyel müşteri adayları toplayın ve QR ile NFC teknolojisi üzerinden bağlantı kurun.",
+        "items": ["QR ve NFC Paylaşımı", "Potansiyel Müşteri Toplama", "Çoklu Kart Tasarımları", "Anlık Güncellemeler"],
+        "button": "WeeCard'i Keşfet"
+      },
+      "weeMenu": {
+        "subtitle": "QR Menü Platformu",
+        "description": "Basılı menüleri hızlı ve modern bir dijital menü deneyimiyle değiştirin. Ürünleri, fiyatları ve kategorileri yeniden baskı maliyeti olmadan istediğiniz an güncelleyin.",
+        "items": ["QR Menü Erişimi", "Sınırsız Güncelleme", "Çoklu Kategoriler", "Mobil Uyumlu Tasarım"],
+        "button": "WeeMenu'yu Keşfet"
+      },
+      "weeCatalog": {
+        "subtitle": "Dijital Ürün Kataloğu",
+        "description": "Güzel dijital kataloglar oluşturun ve ürünlerinizi çevrim içi sergileyin. Şu anda geliştirme aşamasında ve yakında WeeNetwork ekosistemine katılacak.",
+        "items": ["Modern Katalog Düzenleri", "Ürün Vitrin Sayfaları", "Paylaşılabilir Katalog Bağlantıları", "Yakında"],
+        "button": "Bekleme Listesine Katıl",
+        "status": "Yakında"
+      }
+    },
+    "faq": {
+      "label": "SSS",
+      "titleFirst": "Sık sorulan",
+      "titleSecond": "sorular",
+      "items": [
+        {
+          "question": "WeeCard veya WeeMenu kullanmak için uygulama indirmem gerekir mi?",
+          "answer": "Hayır. WeeCard profilleri ve WeeMenu sayfaları QR veya NFC etkileşiminden sonra tarayıcıda açılır."
+        },
+        {
+          "question": "QR kodumu paylaştıktan sonra bilgilerimi güncelleyebilir miyim?",
+          "answer": "Evet. Aynı QR hedefini koruyup ziyaretçilere gösterilen bilgileri güncelleyebilirsiniz."
+        },
+        {
+          "question": "Kendi markamı ve özel tasarımımı kullanabilir miyim?",
+          "answer": "Her ürün marka dilinizi destekleyecek içerik, renk ve sunum seçenekleriyle şekillendirilebilir."
+        },
+        {
+          "question": "WeeMenu kafe, restoran ve oteller için uygun mu?",
+          "answer": "Evet. WeeMenu mobil menü akışına ihtiyaç duyan yiyecek ve konaklama işletmeleri için tasarlanır."
+        },
+        {
+          "question": "WeeCard ile müşteri adayı toplayabilir miyim?",
+          "answer": "WeeCard ziyaretçilerin işletmenize ulaşmasını kolaylaştıran iletişim odaklı akışlar sunabilir."
+        },
+        {
+          "question": "WeeCatalog ne zaman kullanıma açılacak?",
+          "answer": "WeeCatalog bu ilk web sitesi sürümünde yakında gelecek ürün olarak sunuluyor."
+        },
+        {
+          "question": "İşletmem için hangi ürün doğru?",
+          "answer": "Kimlik paylaşımı için WeeCard, taranabilir menü için WeeMenu ve ürün vitrini için WeeCatalog seçin."
+        }
+      ]
+    }
+  },
+  "Footer": {
+    "pages": "Sayfalar",
+    "examples": "Örnekler",
+    "legal": "Yasal",
+    "home": "Ana Sayfa",
+    "contact": "İletişim",
+    "weeCardExample": "WeeCard Örneği",
+    "weeMenuExample": "WeeMenu Örneği",
+    "weeCatalogExample": "WeeCatalog Örneği",
+    "latestBlog": "Son Blog",
+    "terms": "Kullanım Şartları",
+    "privacy": "Gizlilik Politikası",
+    "cookies": "Çerez Politikası",
+    "support": "E-posta Desteği",
+    "phone": "Telefon Desteği",
+    "copyright": "Tüm hakları saklıdır",
+    "poweredBy": "MarkaForce tarafından sunulur"
+  },
+  "NotFound": {
+    "title": "Bu sayfa bulunamadı.",
+    "description": "Sayfa taşınmış olabilir veya adres eksik girilmiş olabilir. Devam etmek için WeeNetwork ana sayfasına dönün.",
+    "button": "Ana sayfaya dön"
+  }
+}

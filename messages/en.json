@@ -1,0 +1,139 @@
+{
+  "Seo": {
+    "home": {
+      "title": "WeeNetwork | Digital Business Cards, QR Menus and Smart Catalogs",
+      "description": "Connect your business digitally with WeeCard, WeeMenu and WeeCatalog in one modern ecosystem.",
+      "keywords": ["digital business card", "QR menu", "digital catalog", "NFC business card", "WeeNetwork"]
+    }
+  },
+  "Navigation": {
+    "about": "About",
+    "blog": "Blog",
+    "weeMenu": "WeeMenu",
+    "weeCard": "WeeCard",
+    "weeCatalog": "WeeCatalog",
+    "faq": "FAQ",
+    "menu": "Menu",
+    "email": "info@weenetwork.com"
+  },
+  "Home": {
+    "hero": {
+      "eyebrowTitle": "QR & NFC Powered",
+      "eyebrowText": "Digital Identity Platform",
+      "titleStart": "Everything Your",
+      "titleMiddle": "Business Needs to",
+      "titleAccent": "Connect Digitally.",
+      "description": "Digital business cards, QR menus and smart catalogs — all within one modern ecosystem.",
+      "videoButton": "Watch Video",
+      "solutionsButton": "Explore Solutions"
+    },
+    "solutions": {
+      "label": "Digital Solutions",
+      "titleFirst": "Three Powerful Solutions.",
+      "titleSecond": "One Connected Ecosystem.",
+      "description": "Choose the products your business needs and manage every digital experience through WeeNetwork.",
+      "learnMore": "Learn More",
+      "weeCard": {
+        "title": "WeeCard",
+        "subtitle": "Digital Business Card",
+        "description": "Share your contact details instantly with QR and NFC technology."
+      },
+      "weeMenu": {
+        "title": "WeeMenu",
+        "subtitle": "QR Menu Platform",
+        "description": "Create and manage restaurant menus without printing costs."
+      },
+      "weeCatalog": {
+        "title": "WeeCatalog",
+        "subtitle": "Digital Product Catalog",
+        "description": "Present products online with a modern catalog experience."
+      }
+    },
+    "about": {
+      "label": "All in One Company",
+      "content": "Bringing together modern <digitalTools>digital tools</digitalTools> for businesses in one place. From digital business cards and QR-powered menus to interactive product showcases — each platform is designed to help businesses present themselves more effectively online. Every service operates independently with its own <features>features and pricing</features> <icon></icon> while making it easier to explore and access the complete Wee product lineup."
+    },
+    "products": {
+      "label": "Services",
+      "title": "Everything You Need To Connect Digitally",
+      "description": "From first interaction to daily operations, WeeNetwork keeps your digital touchpoints clear.",
+      "weeCard": {
+        "subtitle": "Digital Business Card",
+        "description": "Share your contact details instantly with a modern digital business card experience. Create multiple cards, collect leads and connect through QR and NFC technology.",
+        "items": ["QR & NFC Sharing", "Lead Collection", "Multiple Card Designs", "Real-Time Updates"],
+        "button": "Explore WeeCard"
+      },
+      "weeMenu": {
+        "subtitle": "QR Menu Platform",
+        "description": "Replace printed menus with a fast and modern digital menu experience. Update products, prices and categories anytime without reprinting costs.",
+        "items": ["QR Menu Access", "Unlimited Updates", "Multiple Categories", "Mobile Friendly Design"],
+        "button": "Explore WeeMenu"
+      },
+      "weeCatalog": {
+        "subtitle": "Digital Product Catalog",
+        "description": "Create beautiful digital catalogs and showcase your products online. Currently in development and coming soon to the WeeNetwork ecosystem.",
+        "items": ["Modern Catalog Layouts", "Product Showcase Pages", "Shareable Catalog Links", "Coming Soon"],
+        "button": "Join The Waitlist",
+        "status": "Coming Soon"
+      }
+    },
+    "faq": {
+      "label": "FAQ",
+      "titleFirst": "Frequently asked",
+      "titleSecond": "questions",
+      "items": [
+        {
+          "question": "Do I need to install an app to use WeeCard or WeeMenu?",
+          "answer": "No. WeeCard profiles and WeeMenu pages open in the browser after a QR or NFC interaction."
+        },
+        {
+          "question": "Can I update my information after sharing my QR code?",
+          "answer": "Yes. You can keep the same QR destination and update the information shown to visitors."
+        },
+        {
+          "question": "Can I use my own branding and custom design?",
+          "answer": "Each product can be shaped with content, colors and presentation choices that support your brand."
+        },
+        {
+          "question": "Is WeeMenu suitable for cafes, restaurants and hotels?",
+          "answer": "Yes. WeeMenu is built for food and hospitality businesses that need an easy mobile menu flow."
+        },
+        {
+          "question": "Can I collect customer leads with WeeCard?",
+          "answer": "WeeCard can support contact-focused journeys that make it easier for visitors to reach your business."
+        },
+        {
+          "question": "When will WeeCatalog be available?",
+          "answer": "WeeCatalog is presented as an upcoming product in this first website release."
+        },
+        {
+          "question": "Which product is right for my business?",
+          "answer": "Choose WeeCard for identity sharing, WeeMenu for scan-ready menus and WeeCatalog for product showcases."
+        }
+      ]
+    }
+  },
+  "Footer": {
+    "pages": "Pages",
+    "examples": "Examples",
+    "legal": "Legal",
+    "home": "Home",
+    "contact": "Contact",
+    "weeCardExample": "WeeCard Example",
+    "weeMenuExample": "WeeMenu Example",
+    "weeCatalogExample": "WeeCatalog Example",
+    "latestBlog": "Latest Blog",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie Policy",
+    "support": "Email Support",
+    "phone": "Phone Support",
+    "copyright": "All rights reserved",
+    "poweredBy": "Powered by MarkaForce"
+  },
+  "NotFound": {
+    "title": "This page could not be found.",
+    "description": "The page may have moved or the address may be incomplete. Return to the WeeNetwork home page to continue.",
+    "button": "Back to home"
+  }
+}
