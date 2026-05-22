@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetClose, SheetContent, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Link, usePathname } from "@/i18n/navigation";
-import { cn } from "@/lib/utils";
+import { cn, scrollToCurrentHash } from "@/lib/utils";
 
 import { isActiveLink } from "./navbar";
 
@@ -48,6 +48,7 @@ export default function MobileNav({ links, email, menuLabel, className }) {
                   <Link
                     href={link.href}
                     aria-current={isActive ? "page" : undefined}
+                    onClick={() => scrollToCurrentHash(link.href)}
                     className={cn(
                       "flex min-h-12 items-center rounded-2xl px-4 text-[15px] font-medium text-page-foreground transition-colors duration-300 ease-out hover:bg-surface-soft hover:text-brand-orange",
                       isActive && "bg-surface-soft text-brand-orange",

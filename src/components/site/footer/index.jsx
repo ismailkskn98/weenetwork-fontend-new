@@ -11,9 +11,9 @@ const footerColumns = [
     titleKey: "pages",
     links: [
       { href: "/", labelKey: "home" },
-      { href: "#contact", labelKey: "contact" },
-      { href: "#products", label: "WeeCard" },
-      { href: "#products", label: "WeeMenu" },
+      { href: "mailto:info@weenetwork.com", labelKey: "contact" },
+      { href: "https://weenetwork.cards", label: "WeeCard", target: "_blank" },
+      { href: "https://weenetwork.menu", label: "WeeMenu" },
       { href: "#products", label: "WeeCatalog" },
       { href: "#faq", label: "FAQ" },
     ],
@@ -21,8 +21,8 @@ const footerColumns = [
   {
     titleKey: "examples",
     links: [
-      { href: "#products", labelKey: "weeCardExample" },
-      { href: "#products", labelKey: "weeMenuExample" },
+      { href: "https://weenetwork.cards/tr/card/new1", labelKey: "weeCardExample" },
+      { href: "https://weenetwork.menu/tr/menu/sokak", labelKey: "weeMenuExample" },
       { href: "#products", labelKey: "weeCatalogExample" },
       { href: "#faq", labelKey: "latestBlog" },
     ],
@@ -43,7 +43,7 @@ export default async function Footer() {
   const translatedFooterColumns = footerColumns.map((column) => ({
     title: translations(column.titleKey),
     links: column.links.map((link) => ({
-      href: link.href,
+      ...link,
       label: link.label || translations(link.labelKey),
     })),
   }));

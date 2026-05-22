@@ -19,9 +19,9 @@ function ProductList({ items }) {
   );
 }
 
-function ProductLink({ children }) {
+function ProductLink({ href, children }) {
   return (
-    <AnimatedLink href="#contact" variant="warm" icon={ArrowRight} className="mt-6 w-fit">
+    <AnimatedLink href={href} variant="warm" icon={ArrowRight} className="mt-6 w-fit">
       {children}
     </AnimatedLink>
   );
@@ -43,7 +43,7 @@ export default async function ProductsSection() {
         </header>
 
         <div className="mt-8 space-y-5 lg:mt-10">
-          <article className="grid overflow-hidden rounded-[28px] border border-border-soft bg-surface-warm p-2 lg:grid-cols-[1fr_1.2fr]">
+          <article id="products-weecard" className="grid overflow-hidden rounded-[28px] border border-border-soft bg-surface-warm p-2 lg:grid-cols-[1fr_1.2fr]">
             <article className="flex flex-col justify-between rounded-[22px] bg-white p-7 sm:p-9">
                 <div className="flex flex-col">
                   <div className="flex size-12 items-center justify-center rounded-2xl bg-surface-warm">
@@ -54,7 +54,7 @@ export default async function ProductsSection() {
                   <p className="mt-4 max-w-lg text-sm leading-relaxed text-text-muted">{translations("weeCard.description")}</p>
                   <ProductList items={weeCardItems} />
                 </div>
-                <ProductLink>{translations("weeCard.button")}</ProductLink>
+                <ProductLink href="https://weenetwork.cards">{translations("weeCard.button")}</ProductLink>
               </article>
 
               <div className="relative flex overflow-hidden rounded-[22px] max-h-133.75">
@@ -73,7 +73,7 @@ export default async function ProductsSection() {
               </div>
           </article>
 
-          <article className="grid overflow-hidden rounded-[28px] border border-border-soft bg-surface-warm p-2 lg:grid-cols-[1.2fr_1fr]">
+          <article id="products-weemenu" className="grid overflow-hidden rounded-[28px] border border-border-soft bg-surface-warm p-2 lg:grid-cols-[1.2fr_1fr]">
               <div className="relative flex overflow-hidden rounded-[22px] max-h-133.75">
                 <div className="absolute inset-x-0 bottom-0 z-40 h-28 bg-linear-to-t from-surface-warm via-surface-warm/80 to-transparent" />
                 <article className="relative flex-1 flex items-start w-full overflow-hidden pt-8">
@@ -99,11 +99,11 @@ export default async function ProductsSection() {
                   <p className="mt-4 max-w-lg text-sm leading-relaxed text-text-muted">{translations("weeMenu.description")}</p>
                   <ProductList items={weeMenuItems} />
                 </div>
-                <ProductLink>{translations("weeMenu.button")}</ProductLink>
+                <ProductLink href="https://weenetwork.menu">{translations("weeMenu.button")}</ProductLink>
               </div>
           </article>
 
-          <article className="grid overflow-hidden rounded-[28px] border border-border-soft bg-surface-warm p-2 lg:grid-cols-[1fr_1fr]">
+          <article id="products-weecatalog" className="grid overflow-hidden rounded-[28px] border border-border-soft bg-surface-warm p-2 lg:grid-cols-[1fr_1fr]">
               <div className="flex flex-col justify-between rounded-[22px] bg-white p-7 sm:p-9">
                 <div className="flex flex-col items-start">
                   <div className="flex size-12 items-center justify-center rounded-2xl bg-surface-soft">

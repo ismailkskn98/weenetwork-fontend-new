@@ -1,7 +1,7 @@
 "use client";
 
 import { Link, usePathname } from "@/i18n/navigation";
-import { cn } from "@/lib/utils";
+import { cn, scrollToCurrentHash } from "@/lib/utils";
 
 function isActiveFooterLink(pathname, href) {
   return !href.startsWith("#") && pathname === href;
@@ -23,7 +23,10 @@ export default function FooterLinks({ columns }) {
                 <Link
                   key={`${link.href}-${link.label}`}
                   href={link.href}
+                  target={link.target}
+                  rel={link.target === "_blank" ? "noopener noreferrer" : undefined}
                   aria-current={isActive ? "page" : undefined}
+                  onClick={() => scrollToCurrentHash(link.href)}
                   className={cn("w-fit transition-colors duration-300 ease-out hover:text-brand-orange!", isActive ? "text-brand-orange!" : "text-white")}
                 >
                   {link.label}

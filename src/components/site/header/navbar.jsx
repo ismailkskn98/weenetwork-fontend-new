@@ -1,7 +1,7 @@
 "use client";
 
 import { Link, usePathname } from "@/i18n/navigation";
-import { cn } from "@/lib/utils";
+import { cn, scrollToCurrentHash } from "@/lib/utils";
 
 export function isActiveLink(pathname, href) {
   if (href.startsWith("#")) {
@@ -30,6 +30,7 @@ export default function Navbar({ links, className }) {
             key={link.label}
             href={link.href}
             aria-current={isActive ? "page" : undefined}
+            onClick={() => scrollToCurrentHash(link.href)}
             className={cn(
               "whitespace-nowrap text-[15px] font-normal text-page-foreground transition-colors duration-300 ease-out hover:text-brand-orange",
               isActive && "text-brand-orange",
