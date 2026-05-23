@@ -185,6 +185,12 @@ a {
   animation: accordion-up 180ms ease-out;
 }
 
+.char,
+.word {
+  display: inline-block;
+  will-change: transform, opacity, filter;
+}
+
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
