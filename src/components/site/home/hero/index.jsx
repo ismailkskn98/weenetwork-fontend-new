@@ -4,6 +4,8 @@ import { getTranslations } from "next-intl/server";
 
 import AnimatedLink from "@/components/site/common/animatedLink";
 import HeroVideoDialog from "@/components/site/common/heroVideoDialog";
+import MotionScrollInView from "../../common/motionScrollInView";
+import MotionScrollInViewOpacity from "../../common/motionScrollInViewOpacity";
 
 export default async function HeroSection() {
   const translations = await getTranslations("Home.hero");
@@ -11,13 +13,13 @@ export default async function HeroSection() {
   return (
     <section className="fluid gridContainer relative isolate overflow-hidden pb-16 sm:pb-24 pt-20 sm:pt-24 lg:pt-27 lg:min-h-180">
       {/* <Image src="/images/heroTexture.png" alt="" fill priority sizes="100vw" className="fluid -z-20 object-cover object-top opacity-60" /> */}
-      <article className="fluid absolute inset-0 -z-10 pointer-events-none opacity-40">
+      <MotionScrollInViewOpacity className="fluid absolute inset-0 -z-10 pointer-events-none opacity-40">
         <video autoPlay muted loop playsInline className="fluid absolute inset-x-0 top-0 z-0 w-full h-full object-cover object-[50%_20%]">
           <source src="/videos/hero-video.mp4" type="video/mp4" />
         </video>
-      </article>
+      </MotionScrollInViewOpacity>
 
-      <div className="flex w-full max-w-5xl flex-col items-center justify-self-center text-center">
+      <MotionScrollInView className="flex w-full max-w-5xl flex-col items-center justify-self-center text-center">
         <div className="flex items-center gap-3">
           <span className="flex size-11 items-center justify-center rounded-xl bg-surface-soft">
             <Image src="/images/badge-icon.svg" alt="" width={20} height={20} className="w-4 h-4 object-contain object-center animate-spin animation-duration-[5s]" />
@@ -42,7 +44,7 @@ export default async function HeroSection() {
             {translations("solutionsButton")}
           </AnimatedLink>
         </div>
-      </div>
+      </MotionScrollInView>
     </section>
   );
 }

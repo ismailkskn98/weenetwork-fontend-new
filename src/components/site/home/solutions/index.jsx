@@ -5,6 +5,9 @@ import AnimatedLink from "@/components/site/common/animatedLink";
 
 import SectionLabel from "../sectionLabel";
 import Image from "next/image";
+import MotionScrollInViewOpacity from "../../common/motionScrollInViewOpacity";
+import MotionScrollInView from "../../common/motionScrollInView";
+import MotionScrollInViewVariant from "../../common/motionScrollInViewVariant";
 
 const solutionCards = [
   { key: "weeCard", iconTop: "solutions-weecard-top", iconBottom: "solutions-weecard-bottom" },
@@ -16,18 +19,18 @@ export default async function SolutionsSection() {
   const translations = await getTranslations("Home.solutions");
 
   return (
-    <section id="solutions" className="fluid gridContainer bg-dark-surface py-16 text-white lg:py-20">
+    <MotionScrollInViewOpacity id="solutions" className="fluid gridContainer bg-dark-surface py-16 text-white lg:py-20">
       <main>
-        <header className="mx-auto max-w-3xl text-center">
+        <MotionScrollInView className="mx-auto max-w-3xl text-center">
           <SectionLabel>{translations("label")}</SectionLabel>
           <h2 className="mt-5 text-3xl font-semibold leading-tight sm:text-5xl">
             <span className="block">{translations("titleFirst")}</span>
             <span className="block">{translations("titleSecond")}</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-text-subtle sm:text-lg">{translations("description")}</p>
-        </header>
+        </MotionScrollInView>
 
-        <div className="mt-10 grid gap-5 lg:mt-14 lg:grid-cols-3">
+        <MotionScrollInViewVariant className="mt-10 grid gap-5 lg:mt-14 lg:grid-cols-3">
           {solutionCards.map((card) => {
             return (
               <article key={card.key} className="relative flex min-h-72 overflow-hidden rounded-[28px] bg-brand-orange p-7 shadow-[0_20px_55px_rgba(255,81,0,0.22)] sm:p-8">
@@ -52,8 +55,8 @@ export default async function SolutionsSection() {
               </article>
             );
           })}
-        </div>
+        </MotionScrollInViewVariant>
       </main>
-    </section>
+    </MotionScrollInViewOpacity>
   );
 }

@@ -5,6 +5,7 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { FaXTwitter, FaYoutube } from "react-icons/fa6";
 
 import FooterLinks from "./footer-links";
+import MotionScrollInViewOpacity from "../common/motionScrollInViewOpacity";
 
 const footerColumns = [
   {
@@ -57,7 +58,7 @@ export default async function Footer() {
         backgroundSize: "8px 8px",
       }}
     >
-      <section className="grid gap-10 lg:grid-cols-[1fr_1.5fr] lg:gap-12">
+      <MotionScrollInViewOpacity className="grid gap-10 lg:grid-cols-[1fr_1.5fr] lg:gap-12">
         <article className="flex flex-col justify-between gap-10">
           <Link href="/" className="relative flex w-fit items-center gap-2">
             <Image src="/images/logo/Varlık 20500.svg" alt="WeeNetwork logo" width={100} height={100} className="w-24 object-contain sm:w-28" />
@@ -65,9 +66,9 @@ export default async function Footer() {
         </article>
 
         <FooterLinks columns={translatedFooterColumns} />
-      </section>
+      </MotionScrollInViewOpacity>
       <section className="grid gap-10 lg:grid-cols-[1fr_1.5fr] lg:gap-12">
-        <article className="flex flex-col justify-between gap-10 lg:gap-20">
+        <MotionScrollInViewOpacity className="flex flex-col justify-between gap-10 lg:gap-20">
           <div className="flex flex-wrap gap-3">
             {[
               { url: "https://www.instagram.com/weecomi_international_official/", icon: FaInstagram },
@@ -92,8 +93,8 @@ export default async function Footer() {
           <p className="max-w-xs text-xs leading-6 text-white/65">
             (c) {currentYear} <span className="text-white">WeeNetwork</span>, {translations("copyright")}. {translations("poweredBy")}.
           </p>
-        </article>
-        <article className="max-w-sm border-t border-white/30 pt-4">
+        </MotionScrollInViewOpacity>
+        <MotionScrollInViewOpacity className="max-w-sm border-t border-white/30 pt-4">
           <div className="flex flex-col gap-10 sm:gap-14 lg:gap-40">
             <div>
               <h2 className="text-xs font-medium text-white/55">{translations("support")}</h2>
@@ -112,7 +113,7 @@ export default async function Footer() {
               </a>
             </div>
           </div>
-        </article>
+        </MotionScrollInViewOpacity>
       </section>
     </footer>
   );
