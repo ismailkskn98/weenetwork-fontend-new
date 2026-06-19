@@ -13,7 +13,7 @@ export default async function HeroSection() {
   return (
     <section className="fluid gridContainer relative isolate overflow-hidden pb-16 sm:pb-24 pt-20 sm:pt-24 lg:pt-27 lg:min-h-180">
       {/* <Image src="/images/heroTexture.png" alt="" fill priority sizes="100vw" className="fluid -z-20 object-cover object-top opacity-60" /> */}
-      <MotionScrollInViewOpacity className="fluid absolute inset-0 -z-10 pointer-events-none opacity-40">
+      <MotionScrollInViewOpacity className="fluid absolute inset-0 -z-10 pointer-events-none opacity-25!">
         <video autoPlay muted loop playsInline className="fluid absolute inset-x-0 top-0 z-0 w-full h-full object-cover object-[50%_20%]">
           <source src="/videos/hero-video.mp4" type="video/mp4" />
         </video>
