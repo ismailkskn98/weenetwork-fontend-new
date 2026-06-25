@@ -111,8 +111,8 @@ export default function SampleMenusCarousel({ items, translations }) {
 
                     <div className="absolute inset-0 bg-linear-to-b from-black/20 via-black/40 to-black/70 z-10" />
 
-                    <div className="absolute z-20 left-4 right-4 top-4 flex items-center justify-between gap-3">
-                      <div className="flex items-center gap-2 rounded-full border border-black/5 bg-white/88 px-3 py-2 text-[11px] font-semibold text-page-foreground shadow-[0_8px_20px_rgba(15,23,42,0.08)] backdrop-blur-md">
+                    <div className="absolute z-20 left-4 right-4 top-4 flex items-center justify-end sm:justify-between gap-3">
+                      <div className="hidden sm:flex items-center gap-2 rounded-full border border-black/5 bg-white/88 px-3 py-2 text-[11px] font-semibold text-page-foreground shadow-[0_8px_20px_rgba(15,23,42,0.08)] backdrop-blur-md">
                         <QrCode className="size-3.5 text-brand-orange" />
                         {translations.scanToOpen}
                       </div>
@@ -123,10 +123,15 @@ export default function SampleMenusCarousel({ items, translations }) {
 
                     <div className="absolute z-20 inset-0 flex items-center justify-center p-6">
                       <div className="w-full max-w-[260px] text-center transition duration-300">
-                        <div className="relative mx-auto flex min-h-[138px] items-center justify-center">
+                        <div className="relative mx-auto flex min-h-[100px] sm:min-h-[138px] items-center justify-center">
                           <div className="pointer-events-none absolute inset-0 flex items-center justify-center transition duration-300 group-hover:scale-95 group-hover:opacity-0">
                             <div className="rounded-[22px] border border-black/6 bg-white p-2 shadow-[0_12px_30px_rgba(15,23,42,0.12)]">
-                              <QRCodeSVG value={href} size={110} includeMargin />
+                              <div className="block md:hidden">
+                                <QRCodeSVG value={href} size={80} includeMargin />
+                              </div>
+                              <div className="hidden md:block">
+                                <QRCodeSVG value={href} size={110} includeMargin />
+                              </div>
                             </div>
                           </div>
 
@@ -138,7 +143,7 @@ export default function SampleMenusCarousel({ items, translations }) {
                           </div>
                         </div>
 
-                        <p className="mt-4 line-clamp-2 text-lg font-semibold leading-tight text-white">{menu.name}</p>
+                        <p className="mt-4 line-clamp-2 text-base sm:text-lg font-semibold leading-tight text-white">{menu.name}</p>
 
                         <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
                           <span className="rounded-full border border-white/6 bg-white/15 px-3 py-1.5 text-[11px] font-medium text-white">{menu.categories_count ?? 0} kategori</span>

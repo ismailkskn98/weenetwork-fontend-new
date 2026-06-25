@@ -44,7 +44,7 @@ export default function ThemePreview({ labels }) {
             src={theme.image}
             alt={labels[theme.key]}
             fill
-            sizes="(max-width: 1024px) 360px, 560px"
+            unoptimized
             priority={theme.key === "dark"}
             className={cn(
               "object-contain object-center transition-[opacity,transform,filter] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none",
