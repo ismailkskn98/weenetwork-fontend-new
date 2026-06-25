@@ -3,17 +3,9 @@ import { getLocale, getTranslations } from "next-intl/server";
 import SectionLabel from "@/components/site/home/sectionLabel";
 import MotionScrollInView from "@/components/site/common/motionScrollInView";
 
+import { fetchLatestMenus } from "@/lib/weemenu";
+
 import SampleMenusCarousel from "./carousel";
-
-async function fetchLatestMenus(locale) {
-  const baseUrl = process.env.NEXT_PUBLIC_BACKEND_API_URL || "https://api.weenetwork.menu/weemenu/v1";
-  const url = `${baseUrl}/public/latest-menus?limit=12&locale=${encodeURIComponent(locale)}`;
-  const res = await fetch(url, { next: { revalidate: 3600 } });
-  if (!res.ok) return [];
-
-  const json = await res.json();
-  return Array.isArray(json?.data) ? json.data : [];
-}
 
 export default async function SampleMenusSection() {
   const locale = await getLocale();

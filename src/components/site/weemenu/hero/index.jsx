@@ -6,23 +6,15 @@ import AnimatedLink from "@/components/site/common/animatedLink";
 import SectionLabel from "@/components/site/home/sectionLabel";
 import MotionScrollInView from "@/components/site/common/motionScrollInView";
 import MotionScrollInViewOpacity from "@/components/site/common/motionScrollInViewOpacity";
-
-async function fetchLatestMenus(locale) {
-  const baseUrl = process.env.NEXT_PUBLIC_BACKEND_API_URL || "https://api.weenetwork.menu/weemenu/v1";
-  const url = `${baseUrl}/public/latest-menus?limit=10&locale=${encodeURIComponent(locale)}`;
-  const res = await fetch(url, { next: { revalidate: 3600 } });
-  if (!res.ok) return [];
-
-  const json = await res.json();
-  return Array.isArray(json?.data) ? json.data : [];
-}
+import { fetchLatestMenus, getMenuDisplayImage, hasMenuImage, pickMenus } from "@/lib/weemenu";
 
 export default async function HeroSection() {
   const locale = await getLocale();
   const translations = await getTranslations("WeeMenu.hero");
-  const menus = await fetchLatestMenus(locale);
-  const previewMenus = menus.slice(0, 4);
-  const marqueeMenus = menus.length > 0 ? [...menus, ...menus] : [];
+  const menus = await fetchLatestMenus(locale, 20);
+  const [backgroundCard, textCard, sideBackgroundCard, logoCard] = pickMenus(menus, [{ type: "background" }, { type: "text" }, { type: "background" }, { type: "any" }]);
+  const marqueeMenus = menus.filter((menu) => hasMenuImage(menu));
+  const duplicatedMarqueeMenus = marqueeMenus.length > 0 ? [...marqueeMenus, ...marqueeMenus] : [];
 
   return (
     <section className="fluid gridContainer relative isolate overflow-hidden pb-14 pt-9 sm:pb-16 sm:pt-16 lg:pb-20 lg:pt-18 xl:pb-24 xl:pt-20">
@@ -74,17 +66,13 @@ export default async function HeroSection() {
           <div className="mt-12">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-text-subtle">{translations("trustLabel")}</p>
 
-            {marqueeMenus.length > 0 ? (
+            {duplicatedMarqueeMenus.length > 0 ? (
               <div className="mt-5 overflow-hidden mask-[linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
                 <div className="hero-marquee flex min-w-max items-center gap-4">
-                  {marqueeMenus.map((menu, index) => (
+                  {duplicatedMarqueeMenus.map((menu, index) => (
                     <div key={`${menu.id}-${index}`} className="flex min-w-[160px] items-center gap-3 rounded-full border border-black/6 bg-white px-4 py-2.5 shadow-sm">
                       <div className="relative size-9 overflow-hidden rounded-full bg-surface-soft">
-                        {menu.logo_image ? (
-                          <Image src={menu.logo_image} alt={menu.name} fill sizes="36px" className="object-cover" />
-                        ) : (
-                          <div className="flex h-full w-full items-center justify-center text-xs font-semibold text-text-muted">{menu.name?.slice(0, 1)}</div>
-                        )}
+                        <Image src={getMenuDisplayImage(menu, "logo")} alt={menu.name} fill sizes="36px" className="object-cover" />
                       </div>
                       <span className="line-clamp-1 text-sm font-medium text-page-foreground">{menu.name}</span>
                     </div>
@@ -100,23 +88,23 @@ export default async function HeroSection() {
             <div className="absolute right-[6%] top-[8%] hidden size-[62%] rounded-full bg-linear-to-br from-brand-orange/8 via-surface-warm to-transparent blur-3xl lg:block" />
 
             <div className="absolute left-0 top-[6%] hidden w-[28%] space-y-4 lg:block z-20">
-              {previewMenus[0] ? (
+              {backgroundCard ? (
                 <div className="rounded-[28px] border border-black/6 bg-white p-3 shadow-[0_18px_50px_rgba(15,23,42,0.09)]">
                   <div className="relative aspect-[1/1.06] overflow-hidden rounded-[22px] bg-surface-soft">
-                    {previewMenus[0].background ? <Image src={previewMenus[0].background} alt={previewMenus[0].name} fill sizes="220px" className="object-cover" /> : null}
+                    <Image src={backgroundCard.background} alt={backgroundCard.name} fill sizes="220px" className="object-cover" />
                   </div>
                   <div className="mt-3 flex items-center justify-between gap-3">
-                    <p className="line-clamp-1 text-sm font-semibold text-page-foreground">{previewMenus[0].name}</p>
+                    <p className="line-clamp-1 text-sm font-semibold text-page-foreground">{backgroundCard.name}</p>
                     <span className="rounded-full bg-brand-orange/10 px-2.5 py-1 text-[11px] font-semibold text-brand-orange">QR</span>
                   </div>
                 </div>
               ) : null}
 
-              {previewMenus[1] ? (
+              {textCard ? (
                 <div className="rounded-[24px] border border-black/6 bg-page-foreground px-5 py-4 text-white shadow-[0_18px_50px_rgba(15,23,42,0.16)]">
                   <p className="text-[11px] uppercase tracking-[0.18em] text-white/55">Yayindaki menu</p>
-                  <p className="mt-3 line-clamp-2 text-lg font-semibold leading-tight">{previewMenus[1].name}</p>
-                  <p className="mt-3 text-sm text-white/70">{previewMenus[1].products_count || 0}+ urun</p>
+                  <p className="mt-3 line-clamp-2 text-lg font-semibold leading-tight">{textCard.name}</p>
+                  <p className="mt-3 text-sm text-white/70">{textCard.products_count || 0}+ urun</p>
                 </div>
               ) : null}
             </div>
@@ -131,30 +119,25 @@ export default async function HeroSection() {
             </div>
 
             <div className="absolute right-0 top-[4%] hidden w-[20%] lg:block z-20">
-              {previewMenus[2] ? (
+              {sideBackgroundCard ? (
                 <div className="rounded-[28px] border border-black/6 bg-white p-3 shadow-[0_18px_50px_rgba(15,23,42,0.09)]">
                   <div className="relative aspect-[0.78/1.2] overflow-hidden rounded-[22px] bg-surface-soft">
-                    {previewMenus[2].background ? (
-                      <Image src={previewMenus[2].background} alt={previewMenus[2].name} fill sizes="180px" className="object-cover" />
-                    ) : (
-                      <Image src={"/images/weemenu/restoran-modern.jpg"} alt={previewMenus[2].name} fill sizes="180px" className="object-cover" />
-                    )}
-                    {/* <Image src={"/images/weemenu/restoran-modern.jpg"} alt={previewMenus[2].name} fill sizes="180px" className="object-cover" /> */}
+                    <Image src={sideBackgroundCard.background} alt={sideBackgroundCard.name} fill sizes="180px" className="object-cover" />
                   </div>
                 </div>
               ) : null}
             </div>
 
             <div className="absolute bottom-[10%] right-[6%] hidden w-[24%] lg:block z-20">
-              {previewMenus[3] ? (
+              {logoCard ? (
                 <div className="rounded-[24px] border border-black/6 bg-white p-3 shadow-[0_18px_50px_rgba(15,23,42,0.09)]">
                   <div className="flex items-center gap-3">
                     <div className="relative size-14 overflow-hidden rounded-2xl bg-surface-soft">
-                      {previewMenus[3].logo_image ? <Image src={previewMenus[3].logo_image} alt={previewMenus[3].name} fill sizes="56px" className="object-cover" /> : null}
+                      <Image src={getMenuDisplayImage(logoCard, "logo")} alt={logoCard.name} fill sizes="156px" className="object-cover" />
                     </div>
                     <div className="min-w-0">
-                      <p className="line-clamp-1 text-sm font-semibold text-page-foreground">{previewMenus[3].name}</p>
-                      <p className="mt-1 text-xs text-text-muted">{previewMenus[3].categories_count || 0}+ kategori</p>
+                      <p className="line-clamp-1 text-sm font-semibold text-page-foreground">{logoCard.name}</p>
+                      <p className="mt-1 text-xs text-text-muted text-nowrap">{logoCard.categories_count || 0}+ kategori</p>
                     </div>
                   </div>
                 </div>

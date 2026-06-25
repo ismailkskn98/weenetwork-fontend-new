@@ -10,6 +10,8 @@ import { Navigation, A11y } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
+import { resolveImageUrl } from "@/lib/weemenu";
+
 function toMenuUrl(slug) {
   return `https://weenetwork.menu/menu/${encodeURIComponent(slug)}`;
 }
@@ -83,7 +85,7 @@ export default function SampleMenusCarousel({ items, translations }) {
       >
         {items.map((menu) => {
           const href = toMenuUrl(menu.url);
-          const bg = menu.background || menu.logo_image || null;
+          const bg = resolveImageUrl(menu.background || menu.logo_image);
           return (
             <SwiperSlide key={menu.id} className="p-1">
               <a
