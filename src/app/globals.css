@@ -113,11 +113,11 @@
   display: grid;
   grid-template-columns: 1fr min(91%, 90rem) 1fr;
 
-  &>* {
+  & > * {
     grid-column: 2;
   }
 
-  &>.fluid {
+  & > .fluid {
     grid-column: 1 / -1;
   }
 }
@@ -177,6 +177,16 @@ a {
   }
 }
 
+@keyframes hero-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
 .accordion-content[data-state="open"] {
   animation: accordion-down 220ms ease-out;
 }
@@ -189,6 +199,114 @@ a {
 .word {
   display: inline-block;
   will-change: transform, opacity, filter;
+}
+
+.hero-marquee {
+  animation: hero-marquee 28s linear infinite;
+}
+
+/* .hero-marquee:hover {
+  animation-play-state: paused;
+} */
+
+@keyframes orbit-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit-counter-spin {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.orbit-spin {
+  transform-origin: center center;
+  animation: orbit-spin 36s linear infinite;
+}
+
+.orbit-counter-spin {
+  transform-origin: center center;
+  animation: orbit-counter-spin 36s linear infinite;
+}
+
+.orbit-paused .orbit-spin,
+.orbit-paused .orbit-counter-spin {
+  animation-play-state: paused;
+}
+
+.phone-screen-fade__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: crossfade 16s linear infinite;
+}
+
+.phone-screen-fade__slide--1 {
+  animation-delay: 0s;
+}
+
+.phone-screen-fade__slide--2 {
+  animation-delay: -12s;
+}
+
+.phone-screen-fade__slide--3 {
+  animation-delay: -8s;
+}
+
+.phone-screen-fade__slide--4 {
+  animation-delay: -4s;
+}
+
+.orbit-paused .phone-screen-fade__slide {
+  animation-play-state: paused;
+}
+
+.phone-screen-fade {
+  background: #111;
+}
+
+@keyframes crossfade {
+  /* Fade in */
+  0% {
+    opacity: 0;
+  }
+
+  8% {
+    opacity: 1;
+  }
+
+  /* Görünür kal */
+  25% {
+    opacity: 1;
+  }
+
+  /* Fade out */
+  33% {
+    opacity: 0;
+  }
+
+  /* Gizli kal */
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit-spin,
+  .orbit-counter-spin {
+    animation: none;
+  }
+
+  .phone-screen-fade__slide {
+    animation: none;
+    opacity: 0;
+  }
+
+  .phone-screen-fade__slide--1 {
+    opacity: 1;
+  }
 }
 
 .dark {

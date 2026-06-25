@@ -4,6 +4,11 @@
       "title": "WeeNetwork | Dijital Kartvizitler, QR Menüler ve Akıllı Kataloglar",
       "description": "WeeCard, WeeMenu ve WeeCatalog ile işletmenizi tek bir modern ekosistemde dijital olarak bağlayın.",
       "keywords": ["dijital kartvizit", "QR menü", "dijital katalog", "NFC kartvizit", "WeeNetwork"]
+    },
+    "weemenu": {
+      "title": "WeeMenu | Restoranlar İçin QR Menü Platformu",
+      "description": "QR kodlarla dijital restoran menüleri oluşturun ve yönetin. Baskı maliyeti olmadan fiyatları, kategorileri ve ürünleri anında güncelleyin.",
+      "keywords": ["QR menü", "dijital menü", "restoran menüsü", "menü yönetimi", "WeeMenu"]
     }
   },
   "Navigation": {
@@ -130,6 +135,174 @@
     "phone": "Telefon Desteği",
     "copyright": "Tüm hakları saklıdır",
     "poweredBy": "MarkaForce tarafından sunulur"
+  },
+  "WeeMenu": {
+    "hero": {
+      "label": "QR Menü Platformu",
+      "title": "Dakikalar İçinde Güzel Dijital Menüler Oluşturun",
+      "description": "Modern temalar, özel renkler ve çoklu dil desteği ile çarpıcı QR tabanlı restoran menüleri oluşturun. PDF olarak dışa aktarın, ürünleri kolayca yönetin ve anında paylaşın.",
+      "primaryButton": "Başlayın",
+      "secondaryButton": "Özellikleri Gör",
+      "trustLabel": "BÜYÜYEN RESTORANLAR TARAFINDAN GÜVENİLİR",
+      "stat1Label": "Menü Şablonları",
+      "stat1Value": "Modern tasarımlar",
+      "stat2Label": "Aktif Menüler",
+      "stat2Value": "Bu ay oluşturuldu"
+    },
+    "howItWorks": {
+      "label": "Nasıl Çalışır",
+      "title": "Dijital Menünüzü 4 Basit Adımda Oluşturun",
+      "description": "Kurulumdan paylaşmaya kadar, WeeMenu restoran menünüzü modern bir dijital deneyime dönüştürmeyi kolaylaştırır.",
+      "step1Title": "Menünüzü Oluşturun",
+      "step1Description": "Ürünlerinizi ekleyin, kategorileri düzenleyin ve sezgisel panelimizle fiyatları ayarlayın.",
+      "step2Title": "Tasarımı Özelleştirin",
+      "step2Description": "Markanıza uygun modern temalardan seçim yapın, renkleri ve fontları özelleştirin.",
+      "step3Title": "Dışa Aktarın ve Paylaşın",
+      "step3Description": "PDF olarak dışa aktarın veya müşterilerle anında paylaşmak için QR kodları oluşturun.",
+      "step4Title": "Her Yerden Yönetin",
+      "step4Description": "Telefon, tablet veya bilgisayar gibi herhangi bir cihazdan panelinize erişin."
+    },
+    "features": {
+      "label": "Özellikler",
+      "title": "Restoranınız İçin Güçlü Araçlar",
+      "description": "Dijital menünüzü oluşturmak, özelleştirmek ve yönetmek için ihtiyacınız olan her şey.",
+      "feature1Title": "Modern Temalar",
+      "feature1Description": "Birden fazla şık şablondan seçim yapın ve tek tıkla değiştirin.",
+      "feature1Highlight": "Tek Tıkla Tema Değişimi",
+      "feature2Title": "Özel Renkler",
+      "feature2Description": "Özel fontlar ve renk şemaları ile menünüzü kişiselleştirin.",
+      "feature2Highlight": "Tam Marka Kontrolü",
+      "feature3Title": "PDF Dışa Aktarım",
+      "feature3Description": "Baskı için tek tıkla tüm menünüzü PDF olarak dışa aktarın.",
+      "feature3Highlight": "Anında PDF Oluşturma",
+      "feature4Title": "Çoklu Dil",
+      "feature4Description": "Çeşitli müşterilere hizmet vermek için birden fazla dil ekleyin.",
+      "feature4Highlight": "Sınırsız Dil",
+      "feature5Title": "Çapraz Cihaz Erişimi",
+      "feature5Description": "Telefon, tablet veya bilgisayar üzerinden menünüzü sorunsuz yönetin.",
+      "feature5Highlight": "Her Yerde Çalışır",
+      "feature6Title": "WiFi QR Kodu",
+      "feature6Description": "Ayarlar üzerinden QR kod ile müşterilere WiFi şifresini paylaşın.",
+      "feature6Highlight": "Kolay WiFi Paylaşımı",
+      "feature7Title": "Öne Çıkan Ürünler",
+      "feature7Description": "Müşteri dikkatini çekmek için özel ürünleri vurgulayın.",
+      "feature7Highlight": "En Çok Satanları Öne Çıkarın",
+      "feature8Title": "Çalışma Saatleri",
+      "feature8Description": "Restoranınızın çalışma saatlerini menüde gösterin.",
+      "feature8Highlight": "Mevcudiyeti Gösterin"
+    },
+    "dashboardAccess": {
+      "label": "Panel Erişimi",
+      "title": "Menünüzü Her Yerden Yönetin",
+      "description": "Telefon, tablet veya bilgisayar gibi herhangi bir cihazdan panelinize erişin. Uygulama indirmesi gerekmez, her şey tarayıcınızda çalışır.",
+      "buttonText": "Panele Eriş",
+      "device1": "Masaüstü",
+      "device2": "Tablet",
+      "device3": "Mobil",
+      "themeDark": "Koyu",
+      "themeLight": "Açık"
+    },
+    "sampleMenus": {
+      "label": "Canlı Vitrin",
+      "title": "WeeMenu ile Yayındaki Menülere Göz Atın",
+      "description": "Yayında olan ve zengin içerikle hazırlanmış menüleri inceleyin. Her karttan menü akışını açabilir, QR kodu taratarak mobil deneyimi doğrudan test edebilirsiniz.",
+      "prev": "Önceki",
+      "next": "Sonraki",
+      "viewMenu": "Menüyü Gör",
+      "scanToOpen": "QR ile aç",
+      "openInNewTab": "Yeni sekmede aç",
+      "counts": "{categories} kategori • {products} ürün"
+    },
+    "faq": {
+      "label": "SSS",
+      "title": "Sık sorulan sorular",
+      "description": "Menü, ürün, şablon, ayar ve QR paylaşımı hakkında pratik cevaplar — bu sayfada başka yerde anlatmadığımız detaylar.",
+      "all": "Tümü",
+      "categories": {
+        "menu": "Menü",
+        "products": "Ürünler",
+        "templates": "Şablonlar",
+        "settings": "Ayarlar",
+        "qr": "QR ve Paylaşım"
+      },
+      "items": [
+        {
+          "category": "menu",
+          "question": "Tek bir hesaptan birden fazla menü yönetebilir miyim?",
+          "answer": "Evet. Panelinizden farklı lokasyonlar veya markalar için birden fazla menü oluşturabilir, aralarında geçiş yapabilir ve yönetebilirsiniz."
+        },
+        {
+          "category": "menu",
+          "question": "Yeni menü oluştururken mevcut bir menüyü kopyalayabilir miyim?",
+          "answer": "Evet. Menü oluştururken sıfırdan başlayabilir veya mevcut bir menüyü kopyalayarak kategorileri, ürünleri ve ayarları yeniden kullanabilirsiniz."
+        },
+        {
+          "category": "menu",
+          "question": "Menü güncellemeleri misafirlere anında yansır mı?",
+          "answer": "Evet. Fiyat, ürün ve tasarım değişiklikleri yeni baskı beklemeden canlı menüde görünür."
+        },
+        {
+          "category": "products",
+          "question": "Bir ürünün farklı boyut veya fiyat seçenekleri olabilir mi?",
+          "answer": "Evet. Ürün bazında fiyat seçeneklerini etkinleştirerek küçük, orta veya büyük gibi varyantlar ve ayrı fiyatlar tanımlayabilirsiniz."
+        },
+        {
+          "category": "products",
+          "question": "Ürünleri kategorilere ayırabilir miyim?",
+          "answer": "Evet. Ürünler kategoriler altında gruplanır; misafirler menünüzü düzenli ve anlaşılır şekilde gezebilir."
+        },
+        {
+          "category": "products",
+          "question": "Belirli yemekleri menüde öne çıkarabilir miyim?",
+          "answer": "Evet. Ürünleri öne çıkan olarak işaretleyerek desteklenen şablonlarda ayrı bir vurgulu bölümde gösterebilirsiniz."
+        },
+        {
+          "category": "templates",
+          "question": "Menü yayında olduktan sonra şablonu değiştirebilir miyim?",
+          "answer": "Evet. Tasarım panelinden başka bir şablon seçip tek tıkla uygulayarak görünümü istediğiniz zaman yenileyebilirsiniz."
+        },
+        {
+          "category": "templates",
+          "question": "Şablon değiştirmek ürünlerimi veya kategorilerimi siler mi?",
+          "answer": "Hayır. Menü içeriğiniz ve ayarlarınız korunur — yalnızca düzen, renkler ve sunum değişir."
+        },
+        {
+          "category": "templates",
+          "question": "Menüm için renk ve font özelleştirebilir miyim?",
+          "answer": "Evet. Şablon seçiminin ötesinde renkleri, fontları ve arka plan stilini markanıza uyacak şekilde ayarlayabilirsiniz."
+        },
+        {
+          "category": "settings",
+          "question": "Aynı menüyü birden fazla dilde yayınlayabilir miyim?",
+          "answer": "Evet. Menü ayarlarından dil ekleyip kategori ve ürünler için çevrilmiş ad ve açıklamalar girebilirsiniz."
+        },
+        {
+          "category": "settings",
+          "question": "Çalışma saatleri ve iletişim bilgilerini menüde gösterebilir miyim?",
+          "answer": "Evet. Ayarlar panelinden işletme bilgileri, açılış saatleri, adres ve sosyal medya bağlantılarını yapılandırabilirsiniz."
+        },
+        {
+          "category": "settings",
+          "question": "Misafirler menüden doğrudan WiFi'ye bağlanabilir mi?",
+          "answer": "Evet. Ayarlardan WiFi bilgilerinizi eklediğinizde misafirler canlı menü sayfasındaki WiFi QR kodunu tarayabilir."
+        },
+        {
+          "category": "qr",
+          "question": "Fiyat veya ürün güncellediğimde yeni QR kod bastırmam gerekir mi?",
+          "answer": "Hayır. Aynı QR kod ve menü bağlantısı her zaman en güncel yayınlanmış içeriğinizi açar."
+        },
+        {
+          "category": "qr",
+          "question": "Menü QR kodunu baskı materyalleri için indirebilir miyim?",
+          "answer": "Evet. Panelden menü QR kodunuzu görüntüleyip masa, poster veya ambalaj için PNG dosyası olarak indirebilirsiniz."
+        },
+        {
+          "category": "qr",
+          "question": "Misafirlerin menüyü görmek için uygulama indirmesi gerekir mi?",
+          "answer": "Hayır. QR kod tarandığında menü doğrudan mobil tarayıcıda açılır — uygulama indirmeye gerek yoktur."
+        }
+      ]
+    }
   },
   "NotFound": {
     "title": "Bu sayfa bulunamadı.",

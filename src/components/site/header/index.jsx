@@ -16,7 +16,7 @@ export default async function Header() {
   const navLinks = [
     { href: "#about", label: translations("about") },
     { href: "#faq", label: translations("blog") },
-    { href: "#products-weemenu", label: translations("weeMenu") },
+    { href: "/weemenu", label: translations("weeMenu") },
     { href: "#products-weecard", label: translations("weeCard") },
     { href: "#products-weecatalog", label: translations("weeCatalog") },
   ];

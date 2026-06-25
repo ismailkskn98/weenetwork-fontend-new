@@ -4,6 +4,11 @@
       "title": "WeeNetwork | Rəqəmsal Vizit Kartları, QR Menyular və Ağıllı Kataloqlar",
       "description": "WeeCard, WeeMenu və WeeCatalog ilə biznesinizi bir müasir ekosistemdə rəqəmsal şəkildə birləşdirin.",
       "keywords": ["rəqəmsal vizit kartı", "QR menyu", "rəqəmsal kataloq", "NFC vizit kartı", "WeeNetwork"]
+    },
+    "weemenu": {
+      "title": "WeeMenu | Restoranlar Üçün QR Menyu Platformu",
+      "description": "QR kodlarla rəqəmsal restoran menyuları yaradın və idarə edin. Çap xərci olmadan qiymətləri, kateqoriyaları və məhsulları dərhal yeniləyin.",
+      "keywords": ["QR menyu", "rəqəmsal menyu", "restoran menyusu", "menyu idarəetməsi", "WeeMenu"]
     }
   },
   "Navigation": {
@@ -130,6 +135,174 @@
     "phone": "Telefon Dəstəyi",
     "copyright": "Bütün hüquqlar qorunur",
     "poweredBy": "MarkaForce tərəfindən təqdim edilir"
+  },
+  "WeeMenu": {
+    "hero": {
+      "label": "QR Menyu Platforması",
+      "title": "Dəqiqələr İçində Gözəl Rəqəmsal Menyular Yaradın",
+      "description": "Modern temalar, xüsusi rənglər və çoxlu dil dəstəyi ilə cazibədar QR əsaslı restoran menyuları yaradın. PDF kimi ixrac edin, məhsulları asanlıqla idarə edin və dərhal paylaşın.",
+      "primaryButton": "Başla",
+      "secondaryButton": "Xüsusiyyətləri Gör",
+      "trustLabel": "BÜYÜYƏN RESTORANLAR TƏRƏFİNDƏN ETİBAR EDİLİR",
+      "stat1Label": "Menyu Şablonları",
+      "stat1Value": "Modern dizaynlar",
+      "stat2Label": "Aktiv Menyular",
+      "stat2Value": "Bu ay yaradıldı"
+    },
+    "howItWorks": {
+      "label": "Necə İşləyir",
+      "title": "Rəqəmsal Menyunuzu 4 Sadə Addımda Yaradın",
+      "description": "Quruluşdan paylaşmaya qədər, WeeMenu restoran menyunuzu müasir rəqəmsal təcrübəyə çevirməyi asanlaşdırır.",
+      "step1Title": "Menyunuzu Yaradın",
+      "step1Description": "Məhsullarınızı əlavə edin, kateqoriyaları tənzimləyin və intuitiv panelimizlə qiymətləri təyin edin.",
+      "step2Title": "Dizaynı Özəlləşdirin",
+      "step2Description": "Markanız üçün uyğun modern temalardan seçim edin, rəngləri və fontları özəlləşdirin.",
+      "step3Title": "İxrac Edin və Paylaşın",
+      "step3Description": "PDF kimi ixrac edin və ya müştərilərlə dərhal paylaşmaq üçün QR kodları yaradın.",
+      "step4Title": "Hər Yerdən İdarə Edin",
+      "step4Description": "Telefon, tablet və ya kompüter kimi hər hansı cihazdan panelinə daxil olun."
+    },
+    "features": {
+      "label": "Xüsusiyyətlər",
+      "title": "Restoranınız üçün Güclü Alətlər",
+      "description": "Rəqəmsal menyunuzu yaratmaq, özəlləşdirmək və idarə etmək üçün ehtiyacınız olan hər şey.",
+      "feature1Title": "Modern Temalar",
+      "feature1Description": "Birdən çox şablon seçin və bir kliklə dəyişdirin.",
+      "feature1Highlight": "Bir Kliklə Tema Dəyişimi",
+      "feature2Title": "Xüsusi Rənglər",
+      "feature2Description": "Xüsusi fontlar və rəng sxemləri ilə menyunuzu fərdiləşdirin.",
+      "feature2Highlight": "Tam Marka Nəzarəti",
+      "feature3Title": "PDF İxracı",
+      "feature3Description": "Çap üçün bir kliklə bütün menyunuzu PDF kimi ixrac edin.",
+      "feature3Highlight": "Dərhal PDF Yaradılması",
+      "feature4Title": "Çoxlu Dil",
+      "feature4Description": "Müxtəlif müştərilərə xidmət etmək üçün birdən çox dil əlavə edin.",
+      "feature4Highlight": "Limitsiz Dil",
+      "feature5Title": "Çapraz Cihaz Girişi",
+      "feature5Description": "Telefon, tablet və ya kompüter vasitəsilə menyunuzu problemsiz idarə edin.",
+      "feature5Highlight": "Hər Yerdə İşləyir",
+      "feature6Title": "WiFi QR Kodu",
+      "feature6Description": "Tənzimləmələr vasitəsilə QR kod ilə müştərilərə WiFi şifrəsini paylaşın.",
+      "feature6Highlight": "Asan WiFi Paylaşımı",
+      "feature7Title": "Önə Çıxan Məhsullar",
+      "feature7Description": "Müştəri diqqətini cəlb etmək üçün xüsusi məhsulları vurğulayın.",
+      "feature7Highlight": "Ən Çox Satanları Önə Çıxarın",
+      "feature8Title": "İş Saatları",
+      "feature8Description": "Restoranınızın iş saatlarını menyuda göstərin.",
+      "feature8Highlight": "Mövcudluğu Göstərin"
+    },
+    "dashboardAccess": {
+      "label": "Panel Girişi",
+      "title": "Menyunuzu Hər Yerdən İdarə Edin",
+      "description": "Telefon, tablet və ya kompüter kimi hər hansı cihazdan panelinə daxil olun. Tətbiq yükləməsi lazım deyil, hər şey brauzerinizdə işləyir.",
+      "buttonText": "Panelə Daxil Ol",
+      "device1": "Masaüstü",
+      "device2": "Tablet",
+      "device3": "Mobil",
+      "themeDark": "Tünd",
+      "themeLight": "Açıq"
+    },
+    "sampleMenus": {
+      "label": "Nümunə Menyular",
+      "title": "Real Menyularla Təcrübəni Görün",
+      "description": "Son əlavə edilən və məzmunu dolu nümunə menyuları kəşf edin. Kartlara klikləyin və ya QR kodu oxudaraq menyunu dərhal açın.",
+      "prev": "Əvvəlki",
+      "next": "Növbəti",
+      "viewMenu": "Menyunu Gör",
+      "scanToOpen": "QR ilə aç",
+      "openInNewTab": "Yeni tabda açılır",
+      "counts": "{categories} kateqoriya • {products} məhsul"
+    },
+    "faq": {
+      "label": "SSS",
+      "title": "Tez-tez verilən suallar",
+      "description": "Menyu, məhsul, şablon, ayar və QR paylaşımı haqqında praktik cavablar — bu səhifədə başqa yerdə izah etmədiyimiz detallar.",
+      "all": "Hamısı",
+      "categories": {
+        "menu": "Menyu",
+        "products": "Məhsullar",
+        "templates": "Şablonlar",
+        "settings": "Ayarlar",
+        "qr": "QR və Paylaşım"
+      },
+      "items": [
+        {
+          "category": "menu",
+          "question": "Tək hesabdan birdən çox menyu idarə edə bilərəmmi?",
+          "answer": "Bəli. Panelinizdən fərqli məkanlar və ya brendlər üçün bir neçə menyu yarada, aralarında keçid edə və idarə edə bilərsiniz."
+        },
+        {
+          "category": "menu",
+          "question": "Yeni menyu yaradarkən mövcud menyunu kopyalaya bilərəmmi?",
+          "answer": "Bəli. Menyu yaradarkən sıfırdan başlaya və ya mövcud menyunu kopyalayaraq kateqoriyaları, məhsulları və ayarları yenidən istifadə edə bilərsiniz."
+        },
+        {
+          "category": "menu",
+          "question": "Menyu yeniləmələri qonaqlara dərhal əks olunurmu?",
+          "answer": "Bəli. Qiymət, məhsul və dizayn dəyişiklikləri yeni çap gözləmədən canlı menyuda görünür."
+        },
+        {
+          "category": "products",
+          "question": "Məhsulun fərqli ölçü və ya qiymət seçimləri ola bilərmi?",
+          "answer": "Bəli. Məhsul üzrə qiymət seçimlərini aktivləşdirərək kiçik, orta və ya böyük kimi variantlar və ayrı qiymətlər təyin edə bilərsiniz."
+        },
+        {
+          "category": "products",
+          "question": "Məhsulları kateqoriyalara ayıra bilərəmmi?",
+          "answer": "Bəli. Məhsullar kateqoriyalar altında qruplaşdırılır; qonaqlar menyunuzu aydın və strukturlaşdırılmış şəkildə görə bilər."
+        },
+        {
+          "category": "products",
+          "question": "Müəyyən yeməkləri menyuda vurğulaya bilərəmmi?",
+          "answer": "Bəli. Məhsulları önə çıxan kimi işarələyərək dəstəklənən şablonlarda ayrıca vurğulanmış bölmədə göstərə bilərsiniz."
+        },
+        {
+          "category": "templates",
+          "question": "Menyu yayımlandıqdan sonra şablonu dəyişə bilərəmmi?",
+          "answer": "Bəli. Dizayn panelindən başqa şablon seçib bir kliklə tətbiq edərək görünüşü istədiyiniz zaman yeniləyə bilərsiniz."
+        },
+        {
+          "category": "templates",
+          "question": "Şablon dəyişmək məhsullarımı və ya kateqoriyalarımı silirmi?",
+          "answer": "Xeyr. Menyu məzmununuz və ayarlarınız qalır — yalnız düzən, rənglər və təqdimat dəyişir."
+        },
+        {
+          "category": "templates",
+          "question": "Menyum üçün rəng və şrift fərdiləşdirə bilərəmmi?",
+          "answer": "Bəli. Şablon seçimindən əlavə rəngləri, şriftləri və fon stilini brendinizə uyğun tənzimləyə bilərsiniz."
+        },
+        {
+          "category": "settings",
+          "question": "Eyni menyunu bir neçə dildə yaya bilərəmmi?",
+          "answer": "Bəli. Menyu ayarlarından dil əlavə edib kateqoriya və məhsullar üçün tərcümə olunmuş ad və təsvirlər daxil edə bilərsiniz."
+        },
+        {
+          "category": "settings",
+          "question": "İş saatları və əlaqə məlumatlarını menyuda göstərə bilərəmmi?",
+          "answer": "Bəli. Ayarlar panelindən biznes məlumatları, iş saatları, ünvan və sosial media keçidlərini konfiqurasiya edə bilərsiniz."
+        },
+        {
+          "category": "settings",
+          "question": "Qonaqlar menyudan birbaşa WiFi-yə qoşula bilərmi?",
+          "answer": "Bəli. Ayarlardan WiFi məlumatlarınızı əlavə etdikdə qonaqlar canlı menyu səhifəsindəki WiFi QR kodunu skan edə bilər."
+        },
+        {
+          "category": "qr",
+          "question": "Qiymət və ya məhsul yenilədikdə yeni QR kod çap etməliyəmmi?",
+          "answer": "Xeyr. Eyni QR kod və menyu keçidi həmişə ən son yayımlanmış məzmununuzu açır."
+        },
+        {
+          "category": "qr",
+          "question": "Menyu QR kodunu çap materialları üçün endirə bilərəmmi?",
+          "answer": "Bəli. Paneldən menyu QR kodunuzu görüntüləyib masa, poster və ya qablaşdırma üçün PNG faylı kimi endirə bilərsiniz."
+        },
+        {
+          "category": "qr",
+          "question": "Qonaqların menyunu görmək üçün tətbiq yükləməsi lazımdırmı?",
+          "answer": "Xeyr. QR kod skan edildikdə menyu birbaşa mobil brauzerdə açılır — tətbiq yükləməyə ehtiyac yoxdur."
+        }
+      ]
+    }
   },
   "NotFound": {
     "title": "Bu səhifə tapılmadı.",

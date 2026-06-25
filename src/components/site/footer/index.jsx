@@ -14,7 +14,7 @@ const footerColumns = [
       { href: "/", labelKey: "home" },
       { href: "mailto:info@weenetwork.com", labelKey: "contact" },
       { href: "https://weenetwork.cards", label: "WeeCard" },
-      { href: "https://weenetwork.menu", label: "WeeMenu" },
+      { href: "/weemenu", label: "WeeMenu" },
       { href: "#products", label: "WeeCatalog" },
       { href: "#faq", label: "FAQ" },
     ],

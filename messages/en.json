@@ -4,6 +4,11 @@
       "title": "WeeNetwork | Digital Business Cards, QR Menus and Smart Catalogs",
       "description": "Connect your business digitally with WeeCard, WeeMenu and WeeCatalog in one modern ecosystem.",
       "keywords": ["digital business card", "QR menu", "digital catalog", "NFC business card", "WeeNetwork"]
+    },
+    "weemenu": {
+      "title": "WeeMenu | QR Menu Platform for Restaurants",
+      "description": "Create and manage digital restaurant menus with QR codes. Update prices, categories and products instantly without printing costs.",
+      "keywords": ["QR menu", "digital menu", "restaurant menu", "menu management", "WeeMenu"]
     }
   },
   "Navigation": {
@@ -130,6 +135,174 @@
     "phone": "Phone Support",
     "copyright": "All rights reserved",
     "poweredBy": "Powered by MarkaForce"
+  },
+  "WeeMenu": {
+    "hero": {
+      "label": "QR Menu Platform",
+      "title": "Create Beautiful Digital Menus in Minutes",
+      "description": "Build stunning QR-based restaurant menus with modern themes, custom colors, and multi-language support. Export to PDF, manage products easily, and share instantly.",
+      "primaryButton": "Get Started",
+      "secondaryButton": "View Features",
+      "trustLabel": "TRUSTED BY GROWING RESTAURANTS",
+      "stat1Label": "Menu Templates",
+      "stat1Value": "Modern designs",
+      "stat2Label": "Active Menus",
+      "stat2Value": "Created this month"
+    },
+    "howItWorks": {
+      "label": "How It Works",
+      "title": "Create Your Digital Menu in 4 Simple Steps",
+      "description": "From setup to sharing, WeeMenu makes it easy to transform your restaurant menu into a modern digital experience.",
+      "step1Title": "Create Your Menu",
+      "step1Description": "Add your products, organize categories, and set prices with our intuitive dashboard.",
+      "step2Title": "Customize Design",
+      "step2Description": "Choose from modern themes, customize colors and fonts to match your brand.",
+      "step3Title": "Export & Share",
+      "step3Description": "Export to PDF or generate QR codes for instant sharing with customers.",
+      "step4Title": "Manage Anywhere",
+      "step4Description": "Access your dashboard from any device - phone, tablet, or computer."
+    },
+    "features": {
+      "label": "Features",
+      "title": "Powerful Tools for Your Restaurant",
+      "description": "Everything you need to create, customize, and manage your digital menu.",
+      "feature1Title": "Modern Themes",
+      "feature1Description": "Choose from multiple stylish templates and switch with one click.",
+      "feature1Highlight": "One-Click Theme Change",
+      "feature2Title": "Custom Colors",
+      "feature2Description": "Personalize your menu with custom fonts and color schemes.",
+      "feature2Highlight": "Full Brand Control",
+      "feature3Title": "PDF Export",
+      "feature3Description": "Export your entire menu to PDF with a single click for printing.",
+      "feature3Highlight": "Instant PDF Generation",
+      "feature4Title": "Multi-Language",
+      "feature4Description": "Add multiple languages to serve diverse customers.",
+      "feature4Highlight": "Unlimited Languages",
+      "feature5Title": "Cross-Device Access",
+      "feature5Description": "Manage your menu from phone, tablet, or computer seamlessly.",
+      "feature5Highlight": "Works Everywhere",
+      "feature6Title": "WiFi QR Code",
+      "feature6Description": "Share WiFi password with customers via QR code in settings.",
+      "feature6Highlight": "Easy WiFi Sharing",
+      "feature7Title": "Featured Products",
+      "feature7Description": "Highlight special items to attract customer attention.",
+      "feature7Highlight": "Spotlight Best Sellers",
+      "feature8Title": "Working Hours",
+      "feature8Description": "Display your restaurant's operating hours on the menu.",
+      "feature8Highlight": "Show Availability"
+    },
+    "dashboardAccess": {
+      "label": "Dashboard Access",
+      "title": "Manage Your Menu from Anywhere",
+      "description": "Access your dashboard from any device - phone, tablet, or computer. No app download required, everything works in your browser.",
+      "buttonText": "Access Dashboard",
+      "device1": "Desktop",
+      "device2": "Tablet",
+      "device3": "Mobile",
+      "themeDark": "Dark",
+      "themeLight": "Light"
+    },
+    "sampleMenus": {
+      "label": "Live Showcase",
+      "title": "Browse Menus Already Published with WeeMenu",
+      "description": "Review recently published, content-rich menus and evaluate the flow in context. Open any card directly or scan the QR code to test the mobile experience.",
+      "prev": "Previous",
+      "next": "Next",
+      "viewMenu": "View Menu",
+      "scanToOpen": "Scan to open",
+      "openInNewTab": "Opens in a new tab",
+      "counts": "{categories} categories • {products} products"
+    },
+    "faq": {
+      "label": "FAQ",
+      "title": "Frequently asked questions",
+      "description": "Practical answers about menus, products, templates, settings and QR sharing — the details we do not cover elsewhere on this page.",
+      "all": "All",
+      "categories": {
+        "menu": "Menu",
+        "products": "Products",
+        "templates": "Templates",
+        "settings": "Settings",
+        "qr": "QR & Sharing"
+      },
+      "items": [
+        {
+          "category": "menu",
+          "question": "Can I manage more than one menu from a single account?",
+          "answer": "Yes. Your dashboard lets you create, switch between and manage multiple menus for different locations or brands."
+        },
+        {
+          "category": "menu",
+          "question": "Can I duplicate an existing menu when creating a new one?",
+          "answer": "Yes. When creating a menu you can start from scratch or copy an existing menu to reuse categories, products and settings."
+        },
+        {
+          "category": "menu",
+          "question": "Do menu updates go live immediately for guests?",
+          "answer": "Yes. Price, product and design changes are reflected on the live menu without waiting for a new print run."
+        },
+        {
+          "category": "products",
+          "question": "Can a product have multiple sizes or price options?",
+          "answer": "Yes. You can enable price options on a product to offer variants such as small, medium or large with separate prices."
+        },
+        {
+          "category": "products",
+          "question": "Can I organize items into categories?",
+          "answer": "Yes. Products are grouped into categories so guests can browse your menu in a clear, structured order."
+        },
+        {
+          "category": "products",
+          "question": "Can I highlight specific dishes on the menu?",
+          "answer": "Yes. Mark products as featured to display them in a dedicated highlighted section on supported templates."
+        },
+        {
+          "category": "templates",
+          "question": "Can I change the template after my menu is already live?",
+          "answer": "Yes. Open the design panel, pick another template and apply it with one click whenever you want a new look."
+        },
+        {
+          "category": "templates",
+          "question": "Will switching templates delete my products or categories?",
+          "answer": "No. Your menu content and settings stay intact — only the layout, colors and presentation change."
+        },
+        {
+          "category": "templates",
+          "question": "Can I customize colors and fonts for my menu?",
+          "answer": "Yes. Beyond choosing a template, you can adjust colors, fonts and background styling to match your brand."
+        },
+        {
+          "category": "settings",
+          "question": "Can I publish the same menu in multiple languages?",
+          "answer": "Yes. Add languages in menu settings and provide translated names and descriptions for categories and products."
+        },
+        {
+          "category": "settings",
+          "question": "Can I show working hours and contact details on the menu?",
+          "answer": "Yes. Configure business information, opening hours, address and social links from the settings panel."
+        },
+        {
+          "category": "settings",
+          "question": "Can guests connect to WiFi directly from the menu?",
+          "answer": "Yes. Add your WiFi details in settings and guests can scan a WiFi QR code from the live menu page."
+        },
+        {
+          "category": "qr",
+          "question": "Do I need a new QR code when I update prices or products?",
+          "answer": "No. The same QR code and menu link always open your latest published content."
+        },
+        {
+          "category": "qr",
+          "question": "Can I download the menu QR code for print materials?",
+          "answer": "Yes. From the dashboard you can view your menu QR code and download it as a PNG file for tables, posters or packaging."
+        },
+        {
+          "category": "qr",
+          "question": "Do guests need to install an app to view the menu?",
+          "answer": "No. Scanning the QR code opens your menu directly in the mobile browser — no app download required."
+        }
+      ]
+    }
   },
   "NotFound": {
     "title": "This page could not be found.",

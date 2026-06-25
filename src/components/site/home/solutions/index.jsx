@@ -21,14 +21,14 @@ export default async function SolutionsSection() {
   return (
     <MotionScrollInViewOpacity id="solutions" className="fluid gridContainer bg-dark-surface py-16 text-white lg:py-20">
       <main>
-        <MotionScrollInView className="mx-auto max-w-3xl text-center">
+        <article className="mx-auto max-w-3xl text-center">
           <SectionLabel>{translations("label")}</SectionLabel>
           <h2 className="mt-5 text-3xl font-semibold leading-tight sm:text-5xl">
             <span className="block">{translations("titleFirst")}</span>
             <span className="block">{translations("titleSecond")}</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-text-subtle sm:text-lg">{translations("description")}</p>
-        </MotionScrollInView>
+        </article>
 
         <MotionScrollInViewVariant className="mt-10 grid gap-5 lg:mt-14 lg:grid-cols-3">
           {solutionCards.map((card) => {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -19,22 +19,19 @@ function wrapWords(node, indexPrefix = "w") {
     });
   }
 
-  if (Array.isArray(node)) {
-    return node.map((child, index) => wrapWords(child, `${indexPrefix}-${index}`));
-  }
+  if (Array.isArray(node)) return node.map((child, index) => wrapWords(child, `${indexPrefix}-${index}`));
 
-  if (node?.props?.["aria-hidden"]) {
+  if (!React.isValidElement(node)) return node;
+
+  if (node.props?.["aria-hidden"]) {
     return node;
   }
 
-  if (node?.props?.children) {
-    return {
-      ...node,
-      props: {
-        ...node.props,
-        children: wrapWords(node.props.children, indexPrefix),
-      },
-    };
+  if (node.props?.children) {
+    return React.cloneElement(node, {
+      ...node.props,
+      children: wrapWords(node.props.children, indexPrefix),
+    });
   }
 
   return node;
@@ -46,7 +43,7 @@ export default function WordOpacityReveal({ children }) {
   useEffect(() => {
     const words = ref.current.querySelectorAll(".word-reveal");
 
-    gsap.to(words, {
+    const tween = gsap.to(words, {
       opacity: 1,
       stagger: 0.08,
       ease: "none",
@@ -57,6 +54,11 @@ export default function WordOpacityReveal({ children }) {
         scrub: true,
       },
     });
+
+    return () => {
+      tween.scrollTrigger?.kill();
+      tween.kill();
+    };
   }, []);
 
   return <span ref={ref}>{wrapWords(children)}</span>;
