@@ -1,5 +1,7 @@
 import Footer from "@/components/site/footer";
 import Header from "@/components/site/header";
+import FreeTrialBanner from "@/components/site/weemenu/freeTrial/freeTrialBanner";
+import FreeTrialBannerGate from "@/components/site/weemenu/freeTrial/freeTrialBannerGate";
 import { ReactLenis } from "@/lib/lenis";
 
 export default function SiteLayout({ children }) {
@@ -14,6 +16,9 @@ export default function SiteLayout({ children }) {
         overscroll: true,
       }}
     >
+      <FreeTrialBannerGate>
+        <FreeTrialBanner />
+      </FreeTrialBannerGate>
       <Header />
       {children}
       <Footer />

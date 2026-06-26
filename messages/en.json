@@ -221,6 +221,13 @@
       "feature8Description": "Display your restaurant's operating hours on the menu.",
       "feature8Highlight": "Show Availability"
     },
+    "freeTrial": {
+      "bannerMessage": "Your first 30 days are completely free.",
+      "bannerLink": "Start now",
+      "badge": "30 days free",
+      "inlineMessage": "Try WeeMenu free for 30 days — no credit card required.",
+      "inlineLink": "Start now"
+    },
     "dashboardAccess": {
       "label": "Dashboard Access",
       "title": "Manage Your Menu from Anywhere",

@@ -7,7 +7,8 @@ import HeroVideoDialog from "@/components/site/common/heroVideoDialog";
 import SectionLabel from "@/components/site/home/sectionLabel";
 import MotionScrollInView from "@/components/site/common/motionScrollInView";
 import MotionScrollInViewOpacity from "@/components/site/common/motionScrollInViewOpacity";
-import { fetchLatestMenus, getMenuDisplayImage, hasMenuImage, pickMenus } from "@/lib/weemenu";
+import { fetchLatestMenus, getMenuDisplayImage, hasMenuImage, pickMenus, WEEMENU_LOGIN_URL } from "@/lib/weemenu";
+import FreeTrialInline from "../freeTrial/freeTrialInline";
 import PhoneAnimate from "./phoneAnimate";
 
 const WEEMENU_HERO_VIDEO_EMBED_URL = "https://www.youtube.com/embed/UJBY3KAfU70?autoplay=1&rel=0";
@@ -15,6 +16,7 @@ const WEEMENU_HERO_VIDEO_EMBED_URL = "https://www.youtube.com/embed/UJBY3KAfU70?
 export default async function HeroSection() {
   const locale = await getLocale();
   const translations = await getTranslations("WeeMenu.hero");
+  const freeTrialTranslations = await getTranslations("WeeMenu.freeTrial");
   const menus = await fetchLatestMenus(locale, 20);
   const [backgroundCard, textCard, sideBackgroundCard, logoCard] = pickMenus(menus, [{ type: "background" }, { type: "text" }, { type: "background" }, { type: "any" }]);
   const marqueeMenus = menus.filter((menu) => hasMenuImage(menu));
@@ -46,7 +48,9 @@ export default async function HeroSection() {
       </MotionScrollInViewOpacity>
       <div className="flex flex-col gap-12 sm:gap-14 lg:flex-row md:items-center md:justify-center lg:gap-8 xl:gap-11 2xl:gap-14 w-full">
         <MotionScrollInView className="min-w-0 flex-1 max-w-xl md:text-center lg:text-start md:mx-auto lg:mx-0 pt-4 lg:max-w-[48%] lg:pt-0 xl:max-w-lg 2xl:max-w-2xl">
-          <SectionLabel>{translations("label")}</SectionLabel>
+          <div className="flex flex-wrap items-center gap-3 md:justify-center lg:justify-start">
+            <SectionLabel>{translations("label")}</SectionLabel>
+          </div>
           <h1 className="mt-7 max-w-[12ch] md:mx-auto lg:mx-0 text-4xl font-semibold leading-display-tight tracking-[-0.04em] text-page-foreground sm:text-5xl lg:mt-5 lg:max-w-[11ch] lg:text-display-sm lg:leading-display-snug xl:text-display-md xl:max-w-[10ch] 2xl:text-display-lg 2xl:leading-display-tight">
             {translations("title")}
           </h1>
@@ -54,15 +58,9 @@ export default async function HeroSection() {
           <p className="mt-5 max-w-xl text-base leading-7 text-text-muted sm:text-lg sm:leading-8 lg:mt-4 lg:max-w-md lg:text-base lg:leading-7 xl:max-w-lg xl:text-lg xl:leading-8 2xl:max-w-xl">
             {translations("description")}
           </p>
-
+          <FreeTrialInline className="mt-4 md:text-center lg:text-start" />
           <div className="mt-8 flex flex-col gap-4 sm:flex-row md:justify-center lg:justify-start lg:mt-6 xl:mt-8">
-            <AnimatedLink
-              href="https://weenetwork.menu/auth/login"
-              variant="primary"
-              icon={ArrowRight}
-              iconClassName="size-5"
-              className="px-6 text-sm lg:px-5 lg:text-sm xl:px-6 xl:text-base 2xl:px-7 text-white!"
-            >
+            <AnimatedLink href={WEEMENU_LOGIN_URL} variant="primary" icon={ArrowRight} iconClassName="size-5" className="px-6 text-sm lg:px-5 lg:text-sm xl:px-6 xl:text-base 2xl:px-7 text-white!">
               {translations("primaryButton")}
             </AnimatedLink>
             <HeroVideoDialog

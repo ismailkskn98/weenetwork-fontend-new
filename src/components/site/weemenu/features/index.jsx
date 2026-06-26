@@ -3,6 +3,7 @@ import { LayoutTemplate, Palette, FileText, Globe, Smartphone, Wifi, Star, Clock
 
 import SectionLabel from "@/components/site/home/sectionLabel";
 import MotionScrollInView from "@/components/site/common/motionScrollInView";
+import FreeTrialInline from "../freeTrial/freeTrialInline";
 
 export default async function FeaturesSection() {
   const translations = await getTranslations("WeeMenu.features");
@@ -57,6 +58,7 @@ export default async function FeaturesSection() {
           <SectionLabel>{translations("label")}</SectionLabel>
           <h2 className="weemenu-heading">{translations("title")}</h2>
           <p className="weemenu-lead mx-auto max-w-xl">{translations("description")}</p>
+          <FreeTrialInline className="mx-auto mt-4 max-w-lg" />
         </MotionScrollInView>
 
         <div className="mt-10 grid grid-cols-1 gap-3 sm:mt-12 sm:grid-cols-2 sm:gap-4 lg:mt-12 lg:gap-4 xl:mt-14 xl:grid-cols-4 xl:gap-5">

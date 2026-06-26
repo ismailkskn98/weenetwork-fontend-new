@@ -1,4 +1,5 @@
 export const WEEMENU_BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "https://api.weenetwork.menu/weemenu";
+export const WEEMENU_LOGIN_URL = "https://weenetwork.menu/auth/login";
 
 export function resolveImageUrl(path) {
   if (!path) return null;

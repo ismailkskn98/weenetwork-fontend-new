@@ -9,8 +9,7 @@ import FaqSection from "./faq";
 export default function WeeMenu() {
   return (
     <>
-      <HeroSection />
-      <HowItWorksSection />
+      <HeroSection />      <HowItWorksSection />
       <FeaturesSection />
       <SampleMenusSection />
       <TrustedBySection />

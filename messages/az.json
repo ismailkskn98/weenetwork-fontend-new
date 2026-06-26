@@ -221,6 +221,13 @@
       "feature8Description": "Restoranınızın iş saatlarını menyuda göstərin.",
       "feature8Highlight": "Mövcudluğu Göstərin"
     },
+    "freeTrial": {
+      "bannerMessage": "İlk 30 gün tamamilə pulsuzdur.",
+      "bannerLink": "İndi başlayın",
+      "badge": "İlk 30 gün pulsuz",
+      "inlineMessage": "Kredit kartı olmadan ilk 30 günü pulsuz sınayın.",
+      "inlineLink": "İndi başlayın"
+    },
     "dashboardAccess": {
       "label": "Panel Girişi",
       "title": "Menyunuzu Hər Yerdən İdarə Edin",

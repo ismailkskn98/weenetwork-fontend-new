@@ -6,7 +6,8 @@ import MotionScrollInView from "@/components/site/common/motionScrollInView";
 import SectionLabel from "@/components/site/home/sectionLabel";
 
 import ThemePreview from "./themePreview";
-import Image from "next/image";
+import FreeTrialInline from "../freeTrial/freeTrialInline";
+import { WEEMENU_LOGIN_URL } from "@/lib/weemenu";
 
 const DEVICES = [
   { key: "device1", icon: Monitor },
@@ -30,8 +31,10 @@ export default async function DashboardAccessSection() {
               <h2 className="weemenu-heading-inverse lg:text-display-section-lg xl:text-display-section-xl">{translations("title")}</h2>
               <p className="weemenu-lead-inverse max-w-md md:mx-auto lg:mx-0">{translations("description")}</p>
 
+              <FreeTrialInline variant="inverse" className="mt-5 max-w-md md:mx-auto lg:mx-0" />
+
               <div className="mt-6 sm:mt-8">
-                <AnimatedLink href="https://weenetwork.menu/auth/login" variant="primary" icon={ArrowRight} iconClassName="size-5" className="weemenu-btn text-white!">
+                <AnimatedLink href={WEEMENU_LOGIN_URL} variant="primary" icon={ArrowRight} iconClassName="size-5" className="weemenu-btn text-white!">
                   {translations("buttonText")}
                 </AnimatedLink>
               </div>
