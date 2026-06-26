@@ -115,7 +115,7 @@ function VideoModal({ isOpen, label, onClose, videoSrc }) {
   return typeof document !== "undefined" ? createPortal(modal, document.body) : null;
 }
 
-export default function HeroVideoDialog({ label, videoSrc = EMBED_URL, className }) {
+export default function HeroVideoDialog({ label, videoSrc = EMBED_URL, variant = "primary", className }) {
   const [isOpen, setIsOpen] = useState(false);
   const closeDialog = useCallback(() => setIsOpen(false), []);
 
@@ -124,7 +124,7 @@ export default function HeroVideoDialog({ label, videoSrc = EMBED_URL, className
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        className={cn("group/video-trigger cursor-pointer", animatedLinkVariants({ variant: "primary" }), className)}
+        className={cn("group/video-trigger cursor-pointer", animatedLinkVariants({ variant }), className)}
         aria-haspopup="dialog"
         aria-expanded={isOpen}
       >

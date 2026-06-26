@@ -19,7 +19,7 @@ export default async function DashboardAccessSection() {
 
   return (
     <section id="dashboard-access" className="fluid relative overflow-hidden bg-black py-14 sm:py-16 lg:py-20 2xl:py-24 my-4">
-      <div className="absolute inset-0 z-0 bg-[url('/images/weemenu/bg-B0WG-dy.png')] bg-repeat bg-fixed opacity-[0.15]" />
+      <div className="absolute inset-0 z-0 bg-[url('/images/weemenu/bg-B0WG-dy.png')] bg-repeat bg-fixed opacity-[0.12]" />
       <div className="gridContainer relative z-20">
         <MotionScrollInView>
           <div className="grid gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] md:items-center lg:gap-8 xl:gap-11 2xl:gap-14">

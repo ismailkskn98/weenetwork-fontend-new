@@ -3,11 +3,14 @@ import { ArrowRight, BadgeCheck, Globe, ScanLine } from "lucide-react";
 import { getLocale, getTranslations } from "next-intl/server";
 
 import AnimatedLink from "@/components/site/common/animatedLink";
+import HeroVideoDialog from "@/components/site/common/heroVideoDialog";
 import SectionLabel from "@/components/site/home/sectionLabel";
 import MotionScrollInView from "@/components/site/common/motionScrollInView";
 import MotionScrollInViewOpacity from "@/components/site/common/motionScrollInViewOpacity";
 import { fetchLatestMenus, getMenuDisplayImage, hasMenuImage, pickMenus } from "@/lib/weemenu";
 import PhoneAnimate from "./phoneAnimate";
+
+const WEEMENU_HERO_VIDEO_EMBED_URL = "https://www.youtube.com/embed/UJBY3KAfU70?autoplay=1&rel=0";
 
 export default async function HeroSection() {
   const locale = await getLocale();
@@ -62,15 +65,12 @@ export default async function HeroSection() {
             >
               {translations("primaryButton")}
             </AnimatedLink>
-            <AnimatedLink
-              href="#features"
+            <HeroVideoDialog
+              label={translations("videoButton")}
+              videoSrc={WEEMENU_HERO_VIDEO_EMBED_URL}
               variant="soft"
-              icon={ArrowRight}
-              iconClassName="size-5"
-              className="border border-page-foreground/12 bg-white px-6 text-sm hover:bg-surface-soft lg:px-5 lg:text-sm xl:px-6 xl:text-base 2xl:px-7"
-            >
-              {translations("secondaryButton")}
-            </AnimatedLink>
+              className="w-full border border-page-foreground/12 bg-white px-6 text-sm hover:bg-surface-soft sm:w-auto lg:px-5 lg:text-sm xl:px-6 xl:text-base 2xl:px-7"
+            />
           </div>
 
           <div className="mt-10 lg:mt-8 xl:mt-10">

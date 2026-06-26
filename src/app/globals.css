@@ -143,6 +143,24 @@
   --spacing-11: 2.75rem;
   --spacing-18: 4.5rem;
   --min-height-hero: 45rem;
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  @keyframes marquee {
+  from {
+    transform: translateX(0);
+    }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+    }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
 }
 
 @utility gridContainer {
@@ -263,6 +281,39 @@ a {
 
 .hero-marquee {
   animation: hero-marquee 28s linear infinite;
+}
+
+@keyframes integrations-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.integrations-marquee-track {
+  animation-name: integrations-marquee;
+  animation-duration: var(--marquee-duration, 80s);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  will-change: transform;
+}
+
+.integrations-marquee-track-reverse {
+  animation-direction: reverse;
+}
+
+.integrations-marquee-row:hover .integrations-marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .integrations-marquee-track {
+    animation-duration: 180s;
+  }
 }
 
 /* .hero-marquee:hover {

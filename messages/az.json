@@ -144,6 +144,7 @@
       "title": "QR menyunuzu daha zərif və daha sürətli yayımlayın.",
       "description": "WeeMenu ilə brendinizə uyğun rəqəmsal menyular hazırlayın, məhsulları dərhal yeniləyin və qonaqlara mobil cihazda səliqəli bir təcrübə təqdim edin.",
       "primaryButton": "Başla",
+      "videoButton": "Videoya Bax",
       "secondaryButton": "Xüsusiyyətləri Gör",
       "trustLabel": "BÜYÜYƏN RESTORANLAR TƏRƏFİNDƏN ETİBAR EDİLİR",
       "featureIntroLabel": "Önə çıxanlar",
@@ -243,6 +244,15 @@
       "counts": "{categories} kateqoriya • {products} məhsul",
       "categoryCount": "kateqoriya",
       "productCount": "məhsul"
+    },
+    "trustedBy": {
+      "label": "Sosial Sübut",
+      "title": "WeeMenu ilə yayımda olan restoranlardan bəziləri",
+      "description": "Real brendlər rəqəmsal menyularını WeeMenu ilə yayımlayır. Siz də bir neçə dəqiqəyə öz menyunuzu yaradıb qonaqlarınızla paylaşa bilərsiniz.",
+      "stat1": "aktiv menyu",
+      "stat2": "yayımdakı məhsul",
+      "stat3": "loqolu restoran",
+      "buttonText": "İndi Başlayın"
     },
     "download": {
       "title": "WeeMenu-nu indi sınayın",

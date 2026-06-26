@@ -60,3 +60,42 @@ export async function fetchLatestMenus(locale, limit = 12) {
 
   return menus.map(resolveMenuImages);
 }
+
+function getPublicApiBaseUrl() {
+  return process.env.NEXT_PUBLIC_BACKEND_API_URL || "https://api.weenetwork.menu/api/weemenu/v1";
+}
+
+export function toMenuPublicUrl(slug) {
+  return `https://weenetwork.menu/menu/${encodeURIComponent(slug)}`;
+}
+
+export async function fetchTrustedLogos(locale, limit = 24) {
+  const url = `${getPublicApiBaseUrl()}/public/trusted-logos?limit=${limit}&locale=${encodeURIComponent(locale)}`;
+
+  const res = await fetch(url, { next: { revalidate: 3600 } });
+  if (!res.ok) return [];
+
+  const json = await res.json();
+  const logos = Array.isArray(json?.data) ? json.data : [];
+
+  return logos.map((menu) => ({
+    ...menu,
+    logo_image: resolveImageUrl(menu.logo_image),
+  }));
+}
+
+export async function fetchPlatformStats() {
+  const url = `${getPublicApiBaseUrl()}/public/platform-stats`;
+
+  const res = await fetch(url, { next: { revalidate: 3600 } });
+  if (!res.ok) return null;
+
+  const json = await res.json();
+  if (!json?.data) return null;
+
+  return {
+    active_menus: Number(json.data.active_menus || 0),
+    menus_with_logo: Number(json.data.menus_with_logo || 0),
+    visible_products: Number(json.data.visible_products || 0),
+  };
+}

@@ -144,6 +144,7 @@
       "title": "Launch a sharper, faster QR menu experience.",
       "description": "Create branded digital menus with WeeMenu, update products instantly, and give guests a polished mobile experience from the first scan.",
       "primaryButton": "Get Started",
+      "videoButton": "Watch Video",
       "secondaryButton": "View Features",
       "trustLabel": "TRUSTED BY GROWING RESTAURANTS",
       "featureIntroLabel": "Highlights",
@@ -243,6 +244,15 @@
       "counts": "{categories} categories • {products} products",
       "categoryCount": "categories",
       "productCount": "products"
+    },
+    "trustedBy": {
+      "label": "Social Proof",
+      "title": "Some of the restaurants already live on WeeMenu",
+      "description": "Real brands publish their digital menus with WeeMenu. Create your own menu in minutes and share it with your guests.",
+      "stat1": "active menus",
+      "stat2": "live products",
+      "stat3": "restaurants with logos",
+      "buttonText": "Get Started"
     },
     "download": {
       "title": "Try WeeMenu today",
