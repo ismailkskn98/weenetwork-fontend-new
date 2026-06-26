@@ -16,67 +16,57 @@ export default async function DownloadSection() {
   const translations = await getTranslations("WeeMenu.download");
 
   return (
-    <section id="download" className="py-16 lg:py-24 bg-dark-surface overflow-hidden">
+    <section id="download" className="weemenu-section overflow-hidden bg-dark-surface">
       <div className="gridContainer">
         <MotionScrollInView className="relative">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-            <div className="flex-1 w-full">
-              <div className="relative">
-                <div className="relative aspect-[3/4] max-w-sm mx-auto rounded-[3rem] overflow-hidden bg-brand-orange p-8">
+          <div className="flex w-full flex-col items-center gap-12 sm:gap-14 lg:flex-row lg:items-center lg:gap-8 xl:gap-11 2xl:gap-14">
+            <div className="w-full flex-1">
+              <div className="relative mx-auto max-w-xs sm:max-w-sm lg:mx-0">
+                <div className="relative mx-auto aspect-[3/4] max-w-[280px] overflow-hidden rounded-[2.5rem] bg-brand-orange p-6 sm:max-w-sm sm:rounded-[3rem] sm:p-8 lg:max-w-[300px] xl:max-w-sm">
                   <Image
                     src="/images/weeMenuBurger.webp"
                     alt="Delicious Burger"
                     fill
-                    sizes="(max-width: 768px) 100vw, 400px"
+                    sizes="(max-width: 640px) 280px, (max-width: 1024px) 300px, 384px"
                     className="object-cover object-center"
                   />
-                  <div className="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-sm rounded-2xl p-4">
-                    <p className="text-2xl font-bold text-page-foreground">$12.99</p>
+                  <div className="absolute bottom-6 left-6 right-6 rounded-2xl bg-white/95 p-3 backdrop-blur-sm sm:bottom-8 sm:left-8 sm:right-8 sm:p-4">
+                    <p className="text-xl font-bold text-page-foreground sm:text-2xl">$12.99</p>
                     <p className="text-sm text-text-muted">Classic Burger</p>
                   </div>
                 </div>
 
-                <div className="absolute -right-4 top-1/2 -translate-y-1/2 aspect-[3/4] max-w-[280px] rounded-[3rem] overflow-hidden bg-white p-6 shadow-2xl hidden lg:block">
-                  <Image
-                    src="/images/weeMenuClassic.webp"
-                    alt="Classic Menu"
-                    fill
-                    sizes="280px"
-                    className="object-cover object-center"
-                  />
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <p className="text-lg font-bold text-page-foreground">$8.50</p>
-                    <p className="text-xs text-text-muted">Classic Dish</p>
+                <div className="absolute -right-2 top-1/2 hidden aspect-[3/4] max-w-[220px] -translate-y-1/2 overflow-hidden rounded-[2.5rem] bg-white p-5 shadow-2xl lg:block xl:max-w-[260px] xl:rounded-[3rem] xl:p-6 2xl:-right-4 2xl:max-w-[280px]">
+                  <Image src="/images/weeMenuClassic.webp" alt="Classic Menu" fill sizes="(max-width: 1280px) 220px, 280px" className="object-cover object-center" />
+                  <div className="absolute bottom-5 left-5 right-5 xl:bottom-6 xl:left-6 xl:right-6">
+                    <p className="text-base font-bold text-page-foreground xl:text-lg">$8.50</p>
+                    <p className="text-caption text-text-muted">Classic Dish</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="flex-1 max-w-xl">
-              <h2 className="text-3xl font-semibold text-white sm:text-4xl lg:text-5xl">
-                {translations("title")}
-              </h2>
-              <p className="mt-4 text-base text-gray-400 sm:text-lg">
-                {translations("description")}
-              </p>
+            <div className="w-full max-w-xl flex-1 lg:max-w-none">
+              <h2 className="weemenu-heading-inverse">{translations("title")}</h2>
+              <p className="weemenu-lead-inverse max-w-md">{translations("description")}</p>
 
-              <div className="mt-8">
-                <AnimatedLink href="https://weenetwork.menu/auth/login" variant="primary" icon={PlayStoreIcon} className="gap-3 px-8 text-base sm:text-lg">
+              <div className="mt-6 sm:mt-8">
+                <AnimatedLink href="https://weenetwork.menu/auth/login" variant="primary" icon={PlayStoreIcon} iconClassName="size-5" className="weemenu-btn gap-3 text-white!">
                   {translations("buttonText")}
                 </AnimatedLink>
               </div>
 
-              <div className="mt-12 grid grid-cols-3 gap-8">
+              <div className="mt-10 grid grid-cols-3 gap-6 sm:mt-12 sm:gap-8">
                 <div>
-                  <p className="text-2xl font-bold text-white">15+</p>
+                  <p className="text-xl font-bold text-white sm:text-2xl">15+</p>
                   <p className="text-sm text-gray-400">{translations("stat1")}</p>
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-white">12k+</p>
+                  <p className="text-xl font-bold text-white sm:text-2xl">12k+</p>
                   <p className="text-sm text-gray-400">{translations("stat2")}</p>
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-white">95%</p>
+                  <p className="text-xl font-bold text-white sm:text-2xl">95%</p>
                   <p className="text-sm text-gray-400">{translations("stat3")}</p>
                 </div>
               </div>

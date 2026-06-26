@@ -29,40 +29,29 @@ export default async function TestimonialsSection() {
   ];
 
   return (
-    <section id="testimonials" className="py-16 lg:py-24 bg-surface-warm">
+    <section id="testimonials" className="weemenu-section bg-surface-warm">
       <div className="gridContainer">
-        <MotionScrollInView className="text-center max-w-3xl mx-auto">
+        <MotionScrollInView className="mx-auto max-w-2xl text-center xl:max-w-3xl">
           <SectionLabel>{translations("label")}</SectionLabel>
-          <h2 className="mt-6 text-3xl font-semibold text-page-foreground sm:text-4xl lg:text-5xl">
-            {translations("title")}
-          </h2>
-          <p className="mt-4 text-base text-text-muted sm:text-lg">
-            {translations("description")}
-          </p>
+          <h2 className="weemenu-heading">{translations("title")}</h2>
+          <p className="weemenu-lead mx-auto max-w-xl">{translations("description")}</p>
         </MotionScrollInView>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="mt-10 grid grid-cols-1 gap-5 sm:mt-12 sm:gap-6 lg:mt-14 lg:grid-cols-3 lg:gap-6 xl:gap-8">
           {testimonials.map((testimonial, index) => (
             <MotionScrollInView
               key={index}
-              className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow"
+              className="rounded-3xl bg-white p-6 shadow-sm transition-shadow hover:shadow-md sm:p-7 xl:p-8"
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <div className="flex gap-1">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="size-5 fill-brand-orange text-brand-orange"
-                  />
+                  <Star key={i} className="size-4 fill-brand-orange text-brand-orange xl:size-5" />
                 ))}
               </div>
-              <p className="mt-5 text-base text-page-foreground leading-relaxed">
-                {testimonial.content}
-              </p>
-              <div className="mt-6 pt-6 border-t border-border-soft">
-                <p className="font-semibold text-page-foreground">
-                  {testimonial.name}
-                </p>
+              <p className="mt-4 text-sm leading-relaxed text-page-foreground sm:mt-5 sm:text-base">{testimonial.content}</p>
+              <div className="mt-5 border-t border-border-soft pt-5 sm:mt-6 sm:pt-6">
+                <p className="font-semibold text-page-foreground">{testimonial.name}</p>
                 <p className="text-sm text-text-muted">{testimonial.role}</p>
               </div>
             </MotionScrollInView>

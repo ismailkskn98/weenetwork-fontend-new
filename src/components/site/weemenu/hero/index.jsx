@@ -16,23 +16,50 @@ export default async function HeroSection() {
   const [backgroundCard, textCard, sideBackgroundCard, logoCard] = pickMenus(menus, [{ type: "background" }, { type: "text" }, { type: "background" }, { type: "any" }]);
   const marqueeMenus = menus.filter((menu) => hasMenuImage(menu));
   const duplicatedMarqueeMenus = marqueeMenus.length > 0 ? [...marqueeMenus, ...marqueeMenus] : [];
+  const featureItems = [
+    {
+      icon: ScanLine,
+      title: translations("featureCards.scan.title"),
+      description: translations("featureCards.scan.description"),
+    },
+    {
+      icon: Globe,
+      title: translations("featureCards.language.title"),
+      description: translations("featureCards.language.description"),
+    },
+    {
+      icon: BadgeCheck,
+      title: translations("featureCards.update.title"),
+      description: translations("featureCards.update.description"),
+    },
+  ];
 
   return (
-    <section className="fluid gridContainer relative isolate overflow-hidden pb-14 pt-9 sm:pb-16 sm:pt-16 lg:pb-20 lg:pt-18 xl:pb-24 xl:pt-20">
-      <MotionScrollInViewOpacity className="fluid absolute inset-0 -z-10 pointer-events-none opacity-15!">
-        <div className="fluid absolute inset-0 bg-linear-to-br from-surface-soft via-white to-surface-warm" />
+    <section className="fluid gridContainer relative isolate overflow-x-hidden pb-14 pt-8 sm:pb-16 sm:pt-14 lg:pb-20 lg:pt-12 xl:pt-14 2xl:pb-24 2xl:pt-18">
+      <MotionScrollInViewOpacity className="fluid absolute inset-0 -z-10 pointer-events-none opacity-25! rotate-180">
+        <video autoPlay muted loop playsInline className="fluid absolute inset-x-0 top-0 z-0 w-full h-full object-cover object-[50%_30%]">
+          <source src="/videos/hero-video.mp4" type="video/mp4" />
+        </video>
       </MotionScrollInViewOpacity>
-
-      <div className="flex flex-col gap-14 xl:flex-row xl:items-center xl:gap-16">
-        <MotionScrollInView className="flex-1 max-w-2xl pt-4">
+      <div className="flex flex-col gap-12 sm:gap-14 lg:flex-row md:items-center md:justify-center lg:gap-8 xl:gap-11 2xl:gap-14 w-full">
+        <MotionScrollInView className="min-w-0 flex-1 max-w-xl md:text-center lg:text-start md:mx-auto lg:mx-0 pt-4 lg:max-w-[48%] lg:pt-0 xl:max-w-lg 2xl:max-w-2xl">
           <SectionLabel>{translations("label")}</SectionLabel>
+          <h1 className="mt-7 max-w-[12ch] md:mx-auto lg:mx-0 text-4xl font-semibold leading-display-tight tracking-[-0.04em] text-page-foreground sm:text-5xl lg:mt-5 lg:max-w-[11ch] lg:text-display-sm lg:leading-display-snug xl:text-display-md xl:max-w-[10ch] 2xl:text-display-lg 2xl:leading-display-tight">
+            {translations("title")}
+          </h1>
 
-          <h1 className="mt-6 max-w-xl text-4xl font-semibold leading-[1.03] text-page-foreground sm:text-5xl xl:text-[66px] xl:leading-[1.02]">{translations("title")}</h1>
+          <p className="mt-5 max-w-xl text-base leading-7 text-text-muted sm:text-lg sm:leading-8 lg:mt-4 lg:max-w-md lg:text-base lg:leading-7 xl:max-w-lg xl:text-lg xl:leading-8 2xl:max-w-xl">
+            {translations("description")}
+          </p>
 
-          <p className="mt-5 max-w-xl text-base leading-7 text-text-muted sm:text-lg">{translations("description")}</p>
-
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <AnimatedLink href="https://weenetwork.menu/auth/login" variant="primary" icon={ArrowRight} iconClassName="size-5" className="px-7 text-sm lg:text-base text-white!">
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row md:justify-center lg:justify-start lg:mt-6 xl:mt-8">
+            <AnimatedLink
+              href="https://weenetwork.menu/auth/login"
+              variant="primary"
+              icon={ArrowRight}
+              iconClassName="size-5"
+              className="px-6 text-sm lg:px-5 lg:text-sm xl:px-6 xl:text-base 2xl:px-7 text-white!"
+            >
               {translations("primaryButton")}
             </AnimatedLink>
             <AnimatedLink
@@ -40,31 +67,13 @@ export default async function HeroSection() {
               variant="soft"
               icon={ArrowRight}
               iconClassName="size-5"
-              className="border border-page-foreground/12 bg-white px-7 text-sm lg:text-base hover:bg-surface-soft"
+              className="border border-page-foreground/12 bg-white px-6 text-sm hover:bg-surface-soft lg:px-5 lg:text-sm xl:px-6 xl:text-base 2xl:px-7"
             >
               {translations("secondaryButton")}
             </AnimatedLink>
           </div>
 
-          <div className="mt-10 grid max-w-xl grid-cols-1 gap-3 sm:grid-cols-3">
-            <div className="rounded-2xl border border-black/6 bg-white px-4 py-4 shadow-sm">
-              <ScanLine className="size-5 text-brand-orange" />
-              <p className="mt-3 text-sm font-semibold text-page-foreground">QR ile aninda erisim</p>
-              <p className="mt-1 text-xs leading-5 text-text-muted">Musteriler menuyu saniyeler icinde acabilir.</p>
-            </div>
-            <div className="rounded-2xl border border-black/6 bg-white px-4 py-4 shadow-sm">
-              <Globe className="size-5 text-brand-orange" />
-              <p className="mt-3 text-sm font-semibold text-page-foreground">Coklu dil akisi</p>
-              <p className="mt-1 text-xs leading-5 text-text-muted">Farkli kitlelere tek panelden hitap edin.</p>
-            </div>
-            <div className="rounded-2xl border border-black/6 bg-white px-4 py-4 shadow-sm">
-              <BadgeCheck className="size-5 text-brand-orange" />
-              <p className="mt-3 text-sm font-semibold text-page-foreground">Anlik menu guncelleme</p>
-              <p className="mt-1 text-xs leading-5 text-text-muted">Fiyatlari ve urunleri tekrar baski olmadan yonetin.</p>
-            </div>
-          </div>
-
-          <div className="mt-12">
+          <div className="mt-10 lg:mt-8 xl:mt-10">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-text-subtle">{translations("trustLabel")}</p>
 
             {duplicatedMarqueeMenus.length > 0 ? (

@@ -22,36 +22,36 @@ export default async function Header() {
   ];
 
   return (
-    <header className="relative lg:fluid flex lg:gridContainer items-center lg:items-start justify-between lg:justify-start z-30 mt-4 sm:mt-6 gap-8">
-      <MotionScrollInView className="flex-1 w-full lg:w-auto">
-        <section className="flex-1 flex w-full max-w-5xl items-center justify-self-center justify-between gap-3 rounded-full bg-surface-soft lg:w-fit px-3 py-2 sm:gap-5 sm:px-4 lg:gap-7.5">
-          <Link href="/" aria-label="WeeNetwork home" className="flex items-center gap-2">
-            {/* <span className="size-9 rounded-full bg-dark-soft" />
-          <span className="whitespace-nowrap text-base text-page-foreground">
-            <strong className="font-bold">Wee</strong>
-            <span className="font-medium">Network</span>
-          </span> */}
-            <Image src="/images/logo/Varlık 15500.svg" alt="WeeNetwork logo" width={100} height={100} className="w-16 object-contain sm:w-20" />
-          </Link>
-          <Navbar links={navLinks} className="hidden lg:flex" />
-          <div className="flex items-center gap-1.5 sm:gap-2">
-            <div className="inline-block md:hidden">
-              <LanguageChange locale={locale} />
+    <header className="relative z-30 mt-4 sm:mt-6">
+      <main className="flex items-center lg:justify-between lg:w-full">
+        <Link href="/" aria-label="WeeNetwork home" className="hidden xl:flex items-center gap-2">
+          <Image src="/images/logo/Varlık 15500.svg" alt="WeeNetwork logo" width={100} height={100} className="w-16 object-contain sm:w-20" />
+        </Link>
+        <MotionScrollInView className="w-full lg:w-auto">
+          <section className="flex-1 flex w-full max-w-5xl items-center justify-self-center justify-between gap-3 rounded-full bg-surface-soft lg:w-fit px-3 py-2 sm:gap-5 sm:px-4 lg:gap-7.5">
+            <Link href="/" aria-label="WeeNetwork home" className="flex xl:hidden items-center gap-2">
+              <Image src="/images/logo/Varlık 15500.svg" alt="WeeNetwork logo" width={100} height={100} className="w-16 object-contain sm:w-20" />
+            </Link>
+            <Navbar links={navLinks} className="hidden lg:flex" />
+            <div className="flex items-center gap-1.5 sm:gap-2">
+              <div className="inline-block md:hidden">
+                <LanguageChange locale={locale} />
+              </div>
+              <MobileNav links={navLinks} email={translations("email")} menuLabel={translations("menu")} className="lg:hidden" />
+              <a
+                href={`mailto:${translations("email")}`}
+                className="hidden md:flex h-11 items-center justify-center rounded-full bg-dark-surface px-3 text-white transition-colors duration-300 ease-out hover:bg-dark-soft sm:min-w-44 sm:px-4"
+              >
+                <Mail aria-hidden="true" className="size-4 sm:hidden" />
+                <span className="hidden whitespace-nowrap text-body-sm font-semibold sm:inline text-white">{translations("email")}</span>
+              </a>
             </div>
-            <MobileNav links={navLinks} email={translations("email")} menuLabel={translations("menu")} className="lg:hidden" />
-            <a
-              href={`mailto:${translations("email")}`}
-              className="hidden md:flex h-11 items-center justify-center rounded-full bg-dark-surface px-3 text-white transition-colors duration-300 ease-out hover:bg-dark-soft sm:min-w-44 sm:px-4"
-            >
-              <Mail aria-hidden="true" className="size-4 sm:hidden" />
-              <span className="hidden whitespace-nowrap text-[13px] font-semibold sm:inline text-white">{translations("email")}</span>
-            </a>
-          </div>
-        </section>
-      </MotionScrollInView>
-      <MotionScrollInView className="relative lg:absolute lg:right-6 lg:top-1/2 lg:-translate-y-1/2 hidden md:block">
-        <LanguageChange locale={locale} />
-      </MotionScrollInView>
+          </section>
+        </MotionScrollInView>
+        <MotionScrollInView className="relative  hidden lg:block">
+          <LanguageChange locale={locale} />
+        </MotionScrollInView>
+      </main>
     </header>
   );
 }

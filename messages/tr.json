@@ -139,15 +139,35 @@
   "WeeMenu": {
     "hero": {
       "label": "QR Menü Platformu",
-      "title": "Dakikalar İçinde Güzel Dijital Menüler Oluşturun",
-      "description": "Modern temalar, özel renkler ve çoklu dil desteği ile çarpıcı QR tabanlı restoran menüleri oluşturun. PDF olarak dışa aktarın, ürünleri kolayca yönetin ve anında paylaşın.",
+      "eyebrow": "Premium sunum",
+      "eyebrowSecondary": "Canlı menü deneyimi",
+      "title": "QR menünüzü daha şık, daha hızlı yayınlayın.",
+      "description": "WeeMenu ile markanıza uygun dijital menüler hazırlayın, ürünleri anında güncelleyin ve misafirlerinize mobilde kusursuz bir menü deneyimi sunun.",
       "primaryButton": "Başlayın",
       "secondaryButton": "Özellikleri Gör",
       "trustLabel": "BÜYÜYEN RESTORANLAR TARAFINDAN GÜVENİLİR",
+      "featureIntroLabel": "Öne çıkanlar",
+      "insightLabel": "Neden WeeMenu",
+      "insightTitle": "Basılı menü karmaşasını premium bir dijital akışa dönüştürün.",
+      "insightDescription": "Tek panelden tema, içerik ve dil yönetimi yapın; misafirleriniz menünüze saniyeler içinde ulaşsın.",
+      "featureCards": {
+        "scan": {
+          "title": "QR ile anında erişim",
+          "description": "Misafirler menüyü saniyeler içinde açar."
+        },
+        "language": {
+          "title": "Çoklu dil desteği",
+          "description": "Farklı kitlelere tek panelden hitap edin."
+        },
+        "update": {
+          "title": "Anlık güncelleme",
+          "description": "Fiyatları ve ürünleri yeniden baskı olmadan yönetin."
+        }
+      },
       "stat1Label": "Menü Şablonları",
-      "stat1Value": "Modern tasarımlar",
+      "stat1Value": "Markaya uyumlu",
       "stat2Label": "Aktif Menüler",
-      "stat2Value": "Bu ay oluşturuldu"
+      "stat2Value": "Canlı ve paylaşılabilir"
     },
     "howItWorks": {
       "label": "Nasıl Çalışır",

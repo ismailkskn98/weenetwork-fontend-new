@@ -29,7 +29,7 @@ export default function SampleMenusCarousel({ items, translations }) {
 
   return (
     <div className="relative">
-      <div className="mb-8 flex items-center justify-between gap-4">
+      <div className="mb-6 flex items-center justify-between gap-4 sm:mb-8">
         <div className="min-w-0">
           <p className="text-sm font-medium text-text-muted">{translations.scanToOpen}</p>
           <div className="mt-3 flex items-center gap-3">
@@ -46,7 +46,7 @@ export default function SampleMenusCarousel({ items, translations }) {
           <button
             ref={prevRef}
             type="button"
-            className="flex size-11 items-center justify-center rounded-full border border-black/10 bg-white text-page-foreground shadow-sm transition hover:border-black/20 hover:bg-surface-soft"
+            className="flex size-10 items-center justify-center rounded-full border border-black/10 bg-white text-page-foreground shadow-sm transition hover:border-black/20 hover:bg-surface-soft sm:size-11"
             aria-label={translations.prev}
           >
             <ChevronLeft className="size-5" />
@@ -54,7 +54,7 @@ export default function SampleMenusCarousel({ items, translations }) {
           <button
             ref={nextRef}
             type="button"
-            className="flex size-11 items-center justify-center rounded-full border border-black/10 bg-page-foreground text-white shadow-sm transition hover:opacity-90"
+            className="flex size-10 items-center justify-center rounded-full border border-black/10 bg-page-foreground text-white shadow-sm transition hover:opacity-90 sm:size-11"
             aria-label={translations.next}
           >
             <ChevronRight className="size-5" />
@@ -73,13 +73,14 @@ export default function SampleMenusCarousel({ items, translations }) {
           prevEl: prevRef.current,
           nextEl: nextRef.current,
         }}
-        spaceBetween={20}
+        spaceBetween={16}
         slidesPerView={1.08}
         breakpoints={{
-          640: { slidesPerView: 1.35, spaceBetween: 20 },
-          768: { slidesPerView: 1.9, spaceBetween: 22 },
-          1024: { slidesPerView: 2.5, spaceBetween: 24 },
-          1280: { slidesPerView: 3, spaceBetween: 24 },
+          640: { slidesPerView: 1.25, spaceBetween: 18 },
+          768: { slidesPerView: 1.6, spaceBetween: 20 },
+          1024: { slidesPerView: 2.2, spaceBetween: 22 },
+          1280: { slidesPerView: 2.6, spaceBetween: 24 },
+          1536: { slidesPerView: 3, spaceBetween: 24 },
         }}
         className="overflow-visible"
       >
@@ -92,7 +93,7 @@ export default function SampleMenusCarousel({ items, translations }) {
                 href={href}
                 target="_blank"
                 rel="noreferrer"
-                className="group relative block rounded-[32px] border border-black/8 bg-[#fcfcfb] p-3"
+                className="group relative block rounded-[28px] border border-black/8 bg-[#fcfcfb] p-2.5 sm:rounded-[32px] sm:p-3"
                 aria-label={`${menu.name} - ${translations.openInNewTab}`}
               >
                 <div className="relative overflow-hidden rounded-[26px] border border-black/6 bg-white">
@@ -112,7 +113,7 @@ export default function SampleMenusCarousel({ items, translations }) {
                     <div className="absolute inset-0 bg-linear-to-b from-black/20 via-black/40 to-black/70 z-10" />
 
                     <div className="absolute z-20 left-4 right-4 top-4 flex items-center justify-end sm:justify-between gap-3">
-                      <div className="hidden sm:flex items-center gap-2 rounded-full border border-black/5 bg-white/88 px-3 py-2 text-[11px] font-semibold text-page-foreground shadow-[0_8px_20px_rgba(15,23,42,0.08)] backdrop-blur-md">
+                      <div className="hidden sm:flex items-center gap-2 rounded-full border border-black/5 bg-white/88 px-3 py-2 text-caption font-semibold text-page-foreground shadow-[0_8px_20px_rgba(15,23,42,0.08)] backdrop-blur-md">
                         <QrCode className="size-3.5 text-brand-orange" />
                         {translations.scanToOpen}
                       </div>
@@ -146,8 +147,8 @@ export default function SampleMenusCarousel({ items, translations }) {
                         <p className="mt-4 line-clamp-2 text-base sm:text-lg font-semibold leading-tight text-white">{menu.name}</p>
 
                         <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
-                          <span className="rounded-full border border-white/6 bg-white/15 px-3 py-1.5 text-[11px] font-medium text-white">{menu.categories_count ?? 0} kategori</span>
-                          <span className="rounded-full border border-white/6 bg-white/15 px-3 py-1.5 text-[11px] font-medium text-white">{menu.products_count ?? 0} urun</span>
+                          <span className="rounded-full border border-white/6 bg-white/15 px-3 py-1.5 text-caption font-medium text-white">{menu.categories_count ?? 0} kategori</span>
+                          <span className="rounded-full border border-white/6 bg-white/15 px-3 py-1.5 text-caption font-medium text-white">{menu.products_count ?? 0} urun</span>
                         </div>
                       </div>
                     </div>

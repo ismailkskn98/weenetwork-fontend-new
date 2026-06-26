@@ -50,7 +50,7 @@ export default function MobileNav({ links, email, menuLabel, className }) {
                     aria-current={isActive ? "page" : undefined}
                     onClick={() => scrollToCurrentHash(link.href)}
                     className={cn(
-                      "flex min-h-12 items-center rounded-2xl px-4 text-[15px] font-medium text-page-foreground transition-colors duration-300 ease-out hover:bg-surface-soft hover:text-brand-orange",
+                      "flex min-h-12 items-center rounded-2xl px-4 text-body-md font-medium text-page-foreground transition-colors duration-300 ease-out hover:bg-surface-soft hover:text-brand-orange",
                       isActive && "bg-surface-soft text-brand-orange",
                     )}
                   />

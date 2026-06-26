@@ -11,7 +11,7 @@ export default async function HeroSection() {
   const translations = await getTranslations("Home.hero");
 
   return (
-    <section className="fluid gridContainer relative isolate overflow-hidden pb-16 xl:pb-24 pt-20 xl:pt-24 xl:min-h-180">
+    <section className="fluid gridContainer relative isolate overflow-hidden pb-16 xl:pb-24 pt-20 xl:pt-24 xl:min-h-hero">
       {/* <Image src="/images/heroTexture.png" alt="" fill priority sizes="100vw" className="fluid -z-20 object-cover object-top opacity-60" /> */}
       <MotionScrollInViewOpacity className="fluid absolute inset-0 -z-10 pointer-events-none opacity-25!">
         <video autoPlay muted loop playsInline className="fluid absolute inset-x-0 top-0 z-0 w-full h-full object-cover object-[50%_20%]">
@@ -30,7 +30,7 @@ export default async function HeroSection() {
           </span>
         </div>
 
-        <h1 className="mt-4 max-w-5xl text-4xl font-semibold leading-[1.03] tracking-normal text-page-foreground sm:text-6xl xl:text-[86px] xl:leading-25">
+        <h1 className="mt-4 max-w-5xl text-4xl font-semibold leading-display-relaxed tracking-normal text-page-foreground sm:text-6xl xl:text-display-xl xl:leading-display-hero">
           <span className="block">{translations("titleStart")}</span>
           <span className="block">{translations("titleMiddle")}</span>
           <span className="block text-brand-blue">{translations("titleAccent")}</span>

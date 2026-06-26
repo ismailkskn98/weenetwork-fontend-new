@@ -32,7 +32,7 @@ export default function Navbar({ links, className }) {
             aria-current={isActive ? "page" : undefined}
             onClick={() => scrollToCurrentHash(link.href)}
             className={cn(
-              "whitespace-nowrap text-[15px] font-normal text-page-foreground transition-colors duration-300 ease-out hover:text-brand-orange",
+              "whitespace-nowrap text-body-md font-normal text-page-foreground transition-colors duration-300 ease-out hover:text-brand-orange",
               isActive && "text-brand-orange",
             )}
           >

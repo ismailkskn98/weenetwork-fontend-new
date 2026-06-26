@@ -11,7 +11,7 @@ import MotionScrollInViewOpacity from "../../common/motionScrollInViewOpacity";
 
 function ProductList({ items }) {
   return (
-    <ul className="mt-5 space-y-0 text-[13px] leading-6 text-text-muted">
+    <ul className="mt-5 space-y-0 text-body-sm leading-6 text-text-muted">
       {items.map((item) => (
         <li key={item} className="flex gap-2">
           <Check aria-hidden="true" className="mt-1 size-4 shrink-0 text-page-foreground" />
@@ -131,7 +131,7 @@ export default async function ProductsSection() {
                   <div className="aspect-280/569 w-full max-w-70 bg-surface-soft border-[3px] border-white rounded-[22px] mt-33.25" />
                 </div>
                 <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-                  <strong className="block text-[32px] font-medium">WeeCatalog</strong>
+                  <strong className="block text-title-md font-medium">WeeCatalog</strong>
                   <span className="text-base text-text-muted">{translations("weeCatalog.subtitle")}</span>
                 </div>
               </div>

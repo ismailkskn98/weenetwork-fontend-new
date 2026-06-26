@@ -139,15 +139,35 @@
   "WeeMenu": {
     "hero": {
       "label": "QR Menu Platform",
-      "title": "Create Beautiful Digital Menus in Minutes",
-      "description": "Build stunning QR-based restaurant menus with modern themes, custom colors, and multi-language support. Export to PDF, manage products easily, and share instantly.",
+      "eyebrow": "Premium presentation",
+      "eyebrowSecondary": "Live menu experience",
+      "title": "Launch a sharper, faster QR menu experience.",
+      "description": "Create branded digital menus with WeeMenu, update products instantly, and give guests a polished mobile experience from the first scan.",
       "primaryButton": "Get Started",
       "secondaryButton": "View Features",
       "trustLabel": "TRUSTED BY GROWING RESTAURANTS",
+      "featureIntroLabel": "Highlights",
+      "insightLabel": "Why WeeMenu",
+      "insightTitle": "Turn printed menu friction into a premium digital flow.",
+      "insightDescription": "Manage theme, content, and languages from one dashboard while guests reach your menu in seconds.",
+      "featureCards": {
+        "scan": {
+          "title": "Instant QR access",
+          "description": "Guests open the menu in seconds."
+        },
+        "language": {
+          "title": "Multi-language support",
+          "description": "Serve different audiences from one panel."
+        },
+        "update": {
+          "title": "Real-time updates",
+          "description": "Edit prices and products without reprinting."
+        }
+      },
       "stat1Label": "Menu Templates",
-      "stat1Value": "Modern designs",
+      "stat1Value": "Brand-ready layouts",
       "stat2Label": "Active Menus",
-      "stat2Value": "Created this month"
+      "stat2Value": "Live and shareable"
     },
     "howItWorks": {
       "label": "How It Works",

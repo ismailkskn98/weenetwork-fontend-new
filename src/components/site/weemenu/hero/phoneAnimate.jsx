@@ -23,65 +23,105 @@ export default function PhoneAnimate({ backgroundCard, textCard, sideBackgroundC
   });
 
   return (
-    <MotionScrollInView className="flex-1 relative w-full max-w-2xl">
-      <div className="relative mx-auto aspect-[1.05/1] w-full max-w-[760px]">
-        <div className="absolute right-[6%] top-[8%] hidden size-[62%] rounded-full bg-linear-to-br from-brand-orange/8 via-surface-warm to-transparent blur-3xl lg:block" />
-
-        <div className="absolute left-0 top-[6%] hidden w-[28%] space-y-4 lg:block z-20">
-          {backgroundCard ? (
-            <motion.div {...floatingMotion(0)} className="rounded-[28px] border border-black/6 bg-white p-3 shadow-[0_18px_50px_rgba(15,23,42,0.09)]">
-              <div className="relative aspect-[1/1.06] overflow-hidden rounded-[22px] bg-surface-soft">
-                <Image src={backgroundCard.background} alt={backgroundCard.name} fill sizes="220px" className="object-cover" />
+    <MotionScrollInView className="relative w-full max-w-[600px] lg:max-w-[420px] xl:max-w-[500px] 2xl:max-w-[600px]">
+      <div className="relative mx-auto w-full max-w-[600px] lg:max-w-[420px] xl:max-w-[500px] 2xl:max-w-[600px]">
+        <div className="relative">
+          <div className="flex justify-center">
+            <div className="relative z-10 mx-auto aspect-9/19 h-[min(62dvh,700px)] w-auto sm:h-[min(66dvh,720px)] lg:h-auto lg:w-[52%] lg:max-w-[260px] xl:w-[54%] xl:max-w-[310px] 2xl:w-[58%] 2xl:max-w-[370px]">
+              <div className="relative h-full w-full rounded-[2.5rem] bg-[#101010] p-1.5 ring-1 ring-black/8 lg:rounded-[2.75rem] lg:p-2 2xl:rounded-[3rem]">
+                <div className="absolute left-1/2 top-2.5 z-10 h-6 w-24 -translate-x-1/2 rounded-full bg-black/80 lg:top-3 lg:h-7 lg:w-30" />
+                <div className="relative h-full w-full overflow-hidden rounded-[2rem] bg-black lg:rounded-[2.25rem] 2xl:rounded-[2.5rem]">
+                  <Image
+                    src="/images/weemenu/hero-menu-example.webp"
+                    alt="WeeMenu App Interface"
+                    fill
+                    sizes="(max-width: 640px) 75vw, (max-width: 1024px) 280px, (max-width: 1536px) 320px, 370px"
+                    className="object-cover object-center"
+                    priority
+                  />
+                </div>
               </div>
-              <div className="mt-3 flex items-center justify-between gap-3">
-                <p className="line-clamp-1 text-sm font-semibold text-page-foreground">{backgroundCard.name}</p>
-                <span className="rounded-full bg-brand-orange/10 px-2.5 py-1 text-[11px] font-semibold text-brand-orange">QR</span>
-              </div>
-            </motion.div>
-          ) : null}
-
-          {textCard ? (
-            <motion.div {...floatingMotion(1.2)} className="rounded-[24px] border border-black/6 bg-page-foreground px-5 py-4 text-white shadow-[0_18px_50px_rgba(15,23,42,0.16)]">
-              <p className="text-[11px] uppercase tracking-[0.18em] text-white/55">Yayindaki menu</p>
-              <p className="mt-3 line-clamp-2 text-lg font-semibold leading-tight">{textCard.name}</p>
-              <p className="mt-3 text-sm text-white/70">{textCard.products_count || 0}+ urun</p>
-            </motion.div>
-          ) : null}
-        </div>
-
-        <div className="absolute left-1/2 top-1/2 z-10 w-[56%] max-w-[360px] -translate-x-1/2 -translate-y-1/2">
-          <div className="relative aspect-9/19 rounded-[3rem] bg-[#101010] p-2 shadow-sm ring-1 ring-black/8">
-            <div className="absolute left-1/2 top-3 z-10 h-7 w-30 -translate-x-1/2 rounded-full bg-black/80" />
-            <div className="relative h-full w-full overflow-hidden rounded-[2.5rem] bg-black">
-              <Image src="/images/weemenu/hero-menu-example.webp" alt="WeeMenu App Interface" fill sizes="(max-width: 768px) 75vw, 360px" className="object-cover object-center" priority />
             </div>
           </div>
-        </div>
 
-        <div className="absolute right-0 top-[4%] hidden w-[20%] lg:block z-20">
-          {sideBackgroundCard ? (
-            <motion.div {...floatingMotion(0.7)} className="rounded-[28px] border border-black/6 bg-white p-3 shadow-[0_18px_50px_rgba(15,23,42,0.09)]">
-              <div className="relative aspect-[0.78/1.2] overflow-hidden rounded-[22px] bg-surface-soft">
-                <Image src={sideBackgroundCard.background} alt={sideBackgroundCard.name} fill sizes="180px" className="object-cover" />
-              </div>
-            </motion.div>
-          ) : null}
-        </div>
+          <div className="pointer-events-none absolute inset-0 *:pointer-events-auto">
+            <div className="absolute left-[2%] top-[10%] z-20 hidden w-[28%] space-y-3 lg:block lg:space-y-3 xl:space-y-4">
+              {backgroundCard ? (
+                <motion.div {...floatingMotion(0)} className="rounded-[22px] border border-black/6 bg-white p-2.5 xl:rounded-[28px] xl:p-3">
+                  <div className="relative aspect-[1/1.06] overflow-hidden rounded-[18px] bg-surface-soft xl:rounded-[22px]">
+                    <Image src={backgroundCard.background} alt={backgroundCard.name} fill sizes="(max-width: 1280px) 160px, 220px" className="object-cover" />
+                  </div>
+                  <div className="mt-2 flex items-center justify-between gap-2 xl:mt-3 xl:gap-3">
+                    <p className="line-clamp-1 text-xs font-semibold text-page-foreground xl:text-sm">{backgroundCard.name}</p>
+                    <span className="rounded-full bg-brand-orange/10 px-2 py-0.5 text-2xs font-semibold text-brand-orange xl:px-2.5 xl:py-1 xl:text-caption">QR</span>
+                  </div>
+                </motion.div>
+              ) : null}
 
-        <div className="absolute bottom-[10%] right-[6%] hidden w-[24%] lg:block z-20">
-          {logoCard ? (
-            <motion.div {...floatingMotion(1.8)} className="rounded-[24px] border border-black/6 bg-white p-3 shadow-[0_18px_50px_rgba(15,23,42,0.09)]">
-              <div className="flex items-center gap-3">
-                <div className="relative size-14 overflow-hidden rounded-2xl bg-surface-soft">
-                  <Image src={getMenuDisplayImage(logoCard, "logo")} alt={logoCard.name} fill sizes="156px" className="object-cover" />
-                </div>
-                <div className="min-w-0">
-                  <p className="line-clamp-1 text-sm font-semibold text-page-foreground">{logoCard.name}</p>
-                  <p className="mt-1 text-xs text-text-muted text-nowrap">{logoCard.categories_count || 0}+ kategori</p>
-                </div>
-              </div>
-            </motion.div>
-          ) : null}
+              {textCard ? (
+                <motion.div
+                  {...floatingMotion(1.2)}
+                  className="rounded-[20px] border border-black/6 bg-page-foreground px-4 py-3 text-white shadow-[0_18px_50px_rgba(15,23,42,0.16)] xl:rounded-[24px] xl:px-5 xl:py-4"
+                >
+                  <p className="text-2xs uppercase tracking-[0.18em] text-white/55 xl:text-caption">Yayındaki menü</p>
+                  <p className="mt-2 line-clamp-2 text-base font-semibold leading-tight xl:mt-3 xl:text-lg">{textCard.name}</p>
+                  <p className="mt-2 text-xs text-white/70 xl:mt-3 xl:text-sm">{textCard.products_count || 0}+ ürün</p>
+                </motion.div>
+              ) : null}
+            </div>
+
+            <div className="absolute right-[2%] top-[8%] z-20 hidden w-[20%] lg:block">
+              {sideBackgroundCard ? (
+                <motion.div {...floatingMotion(0.7)} className="rounded-[22px] border border-black/6 bg-white p-2.5 shadow-[0_18px_50px_rgba(15,23,42,0.09)] xl:rounded-[28px] xl:p-3">
+                  <div className="relative aspect-[0.78/1.2] overflow-hidden rounded-[18px] bg-surface-soft xl:rounded-[22px]">
+                    <Image src={sideBackgroundCard.background} alt={sideBackgroundCard.name} fill sizes="(max-width: 1280px) 140px, 180px" className="object-cover" />
+                  </div>
+                </motion.div>
+              ) : null}
+            </div>
+
+            <div className="absolute bottom-[14%] left-[4%] z-20 w-[52%] max-w-[220px] sm:bottom-[12%] sm:left-[6%] sm:w-[44%] lg:hidden">
+              {textCard ? (
+                <motion.div {...floatingMotion(0.5)} className="rounded-[24px] border border-black/6 bg-page-foreground px-4 py-4 text-white shadow-[0_18px_50px_rgba(15,23,42,0.18)]">
+                  <p className="text-caption uppercase tracking-[0.18em] text-white/55">WeeMenu</p>
+                  <p className="mt-2 line-clamp-2 text-base font-semibold leading-tight">{textCard.name}</p>
+                  <p className="mt-2 text-xs text-white/70">{textCard.products_count || 0}+ ürün</p>
+                </motion.div>
+              ) : null}
+            </div>
+
+            <div className="absolute bottom-[12%] right-[8%] z-20 w-[34%] max-w-[150px] sm:bottom-[10%] sm:right-[10%] sm:w-[28%] lg:hidden">
+              {logoCard ? (
+                <motion.div {...floatingMotion(1.1)} className="rounded-[22px] border border-black/6 bg-white p-2.5 shadow-[0_18px_50px_rgba(15,23,42,0.10)]">
+                  <div className="flex items-center gap-2.5">
+                    <div className="relative size-11 overflow-hidden rounded-xl bg-surface-soft">
+                      <Image src={getMenuDisplayImage(logoCard, "logo")} alt={logoCard.name} fill sizes="44px" className="object-cover" />
+                    </div>
+                    <div className="min-w-0">
+                      <p className="line-clamp-1 text-xs font-semibold text-page-foreground">{logoCard.name}</p>
+                      <p className="mt-0.5 text-caption text-text-muted">{logoCard.categories_count || 0}+ kategori</p>
+                    </div>
+                  </div>
+                </motion.div>
+              ) : null}
+            </div>
+
+            <div className="absolute bottom-[10%] right-[6%] z-20 hidden w-[24%] lg:block">
+              {logoCard ? (
+                <motion.div {...floatingMotion(1.8)} className="rounded-[20px] border border-black/6 bg-white p-2.5 shadow-[0_18px_50px_rgba(15,23,42,0.09)] xl:rounded-[24px] xl:p-3">
+                  <div className="flex items-center gap-2.5 xl:gap-3">
+                    <div className="relative size-11 overflow-hidden rounded-xl bg-surface-soft xl:size-14 xl:rounded-2xl">
+                      <Image src={getMenuDisplayImage(logoCard, "logo")} alt={logoCard.name} fill sizes="(max-width: 1280px) 44px, 56px" className="object-cover" />
+                    </div>
+                    <div className="min-w-0">
+                      <p className="line-clamp-1 text-xs font-semibold text-page-foreground xl:text-sm">{logoCard.name}</p>
+                      <p className="mt-0.5 text-2xs text-text-muted xl:mt-1 xl:text-xs">{logoCard.categories_count || 0}+ kategori</p>
+                    </div>
+                  </div>
+                </motion.div>
+              ) : null}
+            </div>
+          </div>
         </div>
       </div>
     </MotionScrollInView>

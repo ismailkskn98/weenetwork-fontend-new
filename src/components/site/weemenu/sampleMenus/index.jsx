@@ -15,15 +15,15 @@ export default async function SampleMenusSection() {
   if (!items || items.length === 0) return null;
 
   return (
-    <section id="sample-menus" className="pb-16 lg:pb-24 bg-white overflow-hidden">
-      <div className="">
-        <MotionScrollInView className="max-w-3xl">
+    <section id="sample-menus" className="weemenu-section overflow-hidden bg-white">
+      <div className="gridContainer">
+        <MotionScrollInView className="max-w-2xl lg:max-w-3xl">
           <SectionLabel>{translations("label")}</SectionLabel>
-          <h2 className="mt-6 max-w-2xl text-3xl font-semibold leading-[1.08] text-page-foreground sm:text-4xl lg:text-5xl">{translations("title")}</h2>
-          <p className="mt-4 max-w-2xl text-base leading-7 text-text-muted sm:text-lg">{translations("description")}</p>
+          <h2 className="weemenu-heading max-w-2xl">{translations("title")}</h2>
+          <p className="weemenu-lead max-w-2xl">{translations("description")}</p>
         </MotionScrollInView>
 
-        <div className="mt-12">
+        <div className="mt-10 sm:mt-12 lg:mt-14">
           <SampleMenusCarousel
             items={items}
             translations={{

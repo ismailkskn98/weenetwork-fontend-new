@@ -51,15 +51,15 @@ export default async function FeaturesSection() {
   ];
 
   return (
-    <section id="features" className="pb-14 lg:pb-24">
-      <div className="">
-        <MotionScrollInView className="mx-auto max-w-2xl text-center">
+    <section id="features" className="weemenu-section">
+      <div className="gridContainer">
+        <MotionScrollInView className="mx-auto max-w-2xl text-center xl:max-w-3xl">
           <SectionLabel>{translations("label")}</SectionLabel>
-          <h2 className="mt-5 text-[1.75rem] font-semibold leading-tight text-page-foreground sm:mt-6 sm:text-4xl xl:text-[2.75rem]">{translations("title")}</h2>
-          <p className="mt-3 text-base leading-7 text-text-muted sm:mt-4 sm:text-lg">{translations("description")}</p>
+          <h2 className="weemenu-heading">{translations("title")}</h2>
+          <p className="weemenu-lead mx-auto max-w-xl">{translations("description")}</p>
         </MotionScrollInView>
 
-        <div className="mt-10 grid grid-cols-1 gap-3 sm:mt-12 sm:grid-cols-2 sm:gap-4 xl:mt-14 xl:grid-cols-4 xl:gap-5">
+        <div className="mt-10 grid grid-cols-1 gap-3 sm:mt-12 sm:grid-cols-2 sm:gap-4 lg:mt-12 lg:gap-4 xl:mt-14 xl:grid-cols-4 xl:gap-5">
           {features.map((feature, index) => (
             <MotionScrollInView
               key={feature.title}
@@ -67,12 +67,12 @@ export default async function FeaturesSection() {
               style={{ transitionDelay: `${index * 40}ms` }}
             >
               <div className="flex items-start gap-3.5">
-                <div className="flex size-9 shrink-0 items-center justify-center rounded-full bg-page-foreground/4 text-page-foreground">
+                <div className="flex size-9 shrink-0 items-center justify-center rounded-full bg-page-foreground/4 text-page-foreground lg:size-8 xl:size-9">
                   <feature.icon className="size-4" strokeWidth={1.75} />
                 </div>
                 <div className="min-w-0 pt-0.5">
-                  <h3 className="text-[15px] font-semibold leading-snug text-page-foreground sm:text-base">{feature.title}</h3>
-                  <p className="mt-1.5 text-sm leading-6 text-text-muted">{feature.description}</p>
+                  <h3 className="text-body-md font-semibold leading-snug text-page-foreground sm:text-base">{feature.title}</h3>
+                  <p className="mt-1.5 text-sm leading-6 text-text-muted lg:text-sm xl:text-base xl:leading-7">{feature.description}</p>
                 </div>
               </div>
             </MotionScrollInView>

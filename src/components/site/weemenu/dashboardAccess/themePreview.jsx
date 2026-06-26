@@ -37,7 +37,7 @@ export default function ThemePreview({ labels }) {
         )}
       />
 
-      <div className="relative mx-auto aspect-5/4 max-h-[240px] w-full overflow-hidden sm:max-h-[300px] sm:aspect-16/11 lg:mx-0 lg:max-h-none lg:aspect-16/11 xl:aspect-16/10">
+      <div className="relative mx-auto aspect-5/4 max-h-[220px] w-full overflow-hidden sm:max-h-[280px] lg:mx-0 lg:max-h-[300px] lg:aspect-16/11 xl:max-h-none xl:aspect-16/10 2xl:aspect-16/9">
         {THEMES.map((theme) => (
           <Image
             key={theme.key}
@@ -54,8 +54,8 @@ export default function ThemePreview({ labels }) {
         ))}
       </div>
 
-      <div className="mt-5 flex justify-center">
-        <div className="relative flex gap-7 border-b border-white/20 px-1 sm:gap-8">
+      <div className="mt-4 flex justify-center lg:mt-5">
+        <div className="relative flex gap-6 border-b border-white/20 px-1 sm:gap-7 xl:gap-8">
           {THEMES.map((theme) => {
             const isActive = activeTheme === theme.key;
             return (
@@ -66,7 +66,7 @@ export default function ThemePreview({ labels }) {
                 }}
                 type="button"
                 onClick={() => setActiveTheme(theme.key)}
-                className={cn("relative cursor-pointer pb-2.5 text-sm font-medium tracking-[0.01em] transition-colors duration-300", isActive ? "text-white" : "text-white/65 hover:text-white")}
+                className={cn("relative cursor-pointer pb-2.5 text-sm font-medium tracking-[0.01em] transition-colors duration-300 lg:text-xs xl:text-sm", isActive ? "text-white" : "text-white/65 hover:text-white")}
                 aria-pressed={isActive}
               >
                 {labels[theme.key]}

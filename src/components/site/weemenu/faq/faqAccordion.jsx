@@ -37,7 +37,7 @@ export default function WeeMenuFaqAccordion({ items, categories, allLabel }) {
         ))}
       </div>
 
-      <Accordion key={activeCategory} type="single" collapsible className="mt-6 w-full sm:mt-8">
+      <Accordion key={activeCategory} type="single" collapsible className="mt-6 w-full sm:mt-8 lg:mt-10">
         {filteredItems.slice(0, 8).map((faqItem) => {
           const Icon = CATEGORY_ICONS[faqItem.category] ?? UtensilsCrossed;
 
@@ -66,7 +66,7 @@ function CategoryTab({ active, onClick, children }) {
       type="button"
       onClick={onClick}
       className={cn(
-        "shrink-0 rounded-full border px-4 py-2.5 text-sm font-medium transition-colors duration-300",
+        "shrink-0 rounded-full border px-3.5 py-2 text-sm font-medium transition-colors duration-300 lg:px-4 lg:py-2.5",
         active ? "border-page-foreground bg-page-foreground text-white" : "border-border-soft bg-white text-page-foreground hover:border-page-foreground/20 hover:bg-surface-soft",
       )}
     >
