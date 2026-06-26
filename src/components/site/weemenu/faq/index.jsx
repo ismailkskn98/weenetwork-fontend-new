@@ -11,10 +11,10 @@ export default async function FaqSection() {
   const categories = translations.raw("categories");
 
   return (
-    <section id="faq" className="weemenu-section">
+    <section id="faq" className="weemenu-section overflow-x-hidden">
       <div className="gridContainer">
-        <div className="mx-auto max-w-3xl">
-          <MotionScrollInView>
+        <div className="mx-auto w-full min-w-0 max-w-3xl">
+          <MotionScrollInView className="min-w-0">
             <SectionLabel>{translations("label")}</SectionLabel>
             <h2 className="weemenu-heading">{translations("title")}</h2>
             <p className="weemenu-lead">{translations("description")}</p>

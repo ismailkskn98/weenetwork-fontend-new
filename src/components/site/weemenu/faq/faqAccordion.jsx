@@ -25,8 +25,8 @@ export default function WeeMenuFaqAccordion({ items, categories, allLabel }) {
   }, [activeCategory, items]);
 
   return (
-    <MotionScrollInView className="w-full">
-      <div className="mt-8 flex gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] scrollbar-none [&::-webkit-scrollbar]:hidden">
+    <MotionScrollInView className="w-full min-w-0 max-w-full">
+      <div className="mt-8 flex min-w-0 max-w-full flex-nowrap gap-2 overflow-x-auto overscroll-x-contain pb-1 [-ms-overflow-style:none] scrollbar-none [&::-webkit-scrollbar]:hidden">
         <CategoryTab active={activeCategory === "all"} onClick={() => setActiveCategory("all")}>
           {allLabel}
         </CategoryTab>
@@ -37,21 +37,21 @@ export default function WeeMenuFaqAccordion({ items, categories, allLabel }) {
         ))}
       </div>
 
-      <Accordion key={activeCategory} type="single" collapsible className="mt-6 w-full sm:mt-8 lg:mt-10">
+      <Accordion key={activeCategory} type="single" collapsible className="mt-6 w-full min-w-0 sm:mt-8 lg:mt-10">
         {filteredItems.slice(0, 8).map((faqItem) => {
           const Icon = CATEGORY_ICONS[faqItem.category] ?? UtensilsCrossed;
 
           return (
-            <AccordionItem key={faqItem.question} value={faqItem.question}>
-              <AccordionTrigger className="gap-4 sm:gap-5">
-                <span className="flex min-w-0 items-center gap-4">
+            <AccordionItem key={faqItem.question} value={faqItem.question} className="min-w-0">
+              <AccordionTrigger className="min-w-0 gap-3 sm:gap-4">
+                <span className="flex min-w-0 flex-1 items-center gap-3 sm:gap-4">
                   <span className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-border-soft bg-surface-soft">
                     <Icon aria-hidden="true" className="size-[18px] text-page-foreground" />
                   </span>
-                  <span className="text-left">{faqItem.question}</span>
+                  <span className="min-w-0 flex-1 text-left text-sm leading-snug wrap-break-word sm:text-base sm:leading-normal">{faqItem.question}</span>
                 </span>
               </AccordionTrigger>
-              <AccordionContent className="pl-14 sm:pl-18">{faqItem.answer}</AccordionContent>
+              <AccordionContent className="pl-13 sm:pl-18">{faqItem.answer}</AccordionContent>
             </AccordionItem>
           );
         })}

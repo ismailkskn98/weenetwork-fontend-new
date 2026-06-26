@@ -44,7 +44,7 @@ function AccordionTrigger({
           className
         )}
         {...props}>
-        <span className="flex-1 pr-4">{children}</span>
+        <span className="min-w-0 flex-1 pr-4">{children}</span>
         <span
           data-slot="accordion-trigger-icon"
           className="flex size-6 shrink-0 items-center justify-center text-page-foreground"
