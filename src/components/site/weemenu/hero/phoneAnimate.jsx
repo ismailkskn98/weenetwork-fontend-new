@@ -1,8 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
-import MotionScrollInView from "../../common/motionScrollInView";
 import Image from "next/image";
 import { getMenuDisplayImage } from "@/lib/weemenu";
+import MotionScrollInViewOpacity from "../../common/motionScrollInViewOpacity";
 
 export default function PhoneAnimate({ backgroundCard, textCard, sideBackgroundCard, logoCard, labels }) {
   const floatingMotion = (delay = 0) => ({
@@ -22,7 +22,7 @@ export default function PhoneAnimate({ backgroundCard, textCard, sideBackgroundC
   });
 
   return (
-    <MotionScrollInView className="relative w-full max-w-[600px] lg:max-w-[420px] xl:max-w-[500px] 2xl:max-w-[600px]">
+    <MotionScrollInViewOpacity className="relative w-full max-w-[600px] lg:max-w-[420px] xl:max-w-[500px] 2xl:max-w-[600px]">
       <div className="relative mx-auto w-full max-w-[600px] lg:max-w-[420px] xl:max-w-[500px] 2xl:max-w-[600px]">
         <div className="relative">
           <div className="flex justify-center">
@@ -131,6 +131,6 @@ export default function PhoneAnimate({ backgroundCard, textCard, sideBackgroundC
           </div>
         </div>
       </div>
-    </MotionScrollInView>
+    </MotionScrollInViewOpacity>
   );
 }
