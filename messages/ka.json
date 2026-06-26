@@ -185,6 +185,11 @@
           "description": "შეცვალეთ ფასები და პროდუქტები ხელახალი ბეჭდვის გარეშე."
         }
       },
+      "appInterfaceAlt": "WeeMenu აპის ინტერფეისი",
+      "qrBadge": "QR",
+      "liveMenuLabel": "ცოცხალი მენიუ",
+      "productCountSuffix": "პროდუქტი",
+      "categoryCountSuffix": "კატეგორია",
       "stat1Label": "მენიუს შაბლონები",
       "stat1Value": "ბრენდზე მორგებული",
       "stat2Label": "აქტიური მენიუები",
@@ -201,7 +206,11 @@
       "step3Title": "გაახდეთ და გაუზიარეთ",
       "step3Description": "გაახდეთ PDF ან შექმენით QR კოდები მომხმარებლებთან მყისიერი გაზიარებისთვის.",
       "step4Title": "მართეთ ყველგან",
-      "step4Description": "მიიღეთ წვდომა პანელზე ნებისმიერი მოწყობილობიდან - ტელეფონიდან, ტაბლეტიდან ან კომპიუტერიდან."
+      "step4Description": "მიიღეთ წვდომა პანელზე ნებისმიერი მოწყობილობიდან - ტელეფონიდან, ტაბლეტიდან ან კომპიუტერიდან.",
+      "screen1Alt": "WeeMenu პროდუქტის პარამეტრების ეკრანი",
+      "screen2Alt": "WeeMenu მენიუების სიის ეკრანი",
+      "screen3Alt": "WeeMenu შაბლონების ეკრანი",
+      "screen4Alt": "WeeMenu ფერის მორგების ეკრანი"
     },
     "features": {
       "label": "ფუნქციები",
@@ -252,7 +261,21 @@
       "viewMenu": "მენიუს ნახვა",
       "scanToOpen": "დაასკანერე გასახსნელად",
       "openInNewTab": "გაიხსნება ახალ ჩანართში",
-      "counts": "{categories} კატეგორია • {products} პროდუქტი"
+      "counts": "{categories} კატეგორია • {products} პროდუქტი",
+      "categoryCount": "კატეგორია",
+      "productCount": "პროდუქტი"
+    },
+    "download": {
+      "title": "სცადეთ WeeMenu ახლავე",
+      "description": "შექმენით, გამოაქვეყნეთ და გაუზიარეთ თქვენი ციფრული მენიუ წუთებში თანამედროვე QR გამოცდილებით.",
+      "buttonText": "გახსენით WeeMenu",
+      "stat1": "თემის ვარიანტი",
+      "stat2": "გამოქვეყნებული მენიუ",
+      "stat3": "მობილურზე მორგებული",
+      "primaryCardAlt": "ბურგერის მენიუს წინასწარი ნახვა",
+      "primaryCardTitle": "კლასიკური ბურგერი",
+      "secondaryCardAlt": "კლასიკური მენიუს წინასწარი ნახვა",
+      "secondaryCardTitle": "კლასიკური კერძი"
     },
     "faq": {
       "label": "FAQ",

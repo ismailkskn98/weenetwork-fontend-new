@@ -33,6 +33,8 @@ export default async function SampleMenusSection() {
               scanToOpen: translations("scanToOpen"),
               openInNewTab: translations("openInNewTab"),
               counts: translations.raw("counts"),
+              categoryCount: translations("categoryCount"),
+              productCount: translations("productCount"),
             }}
           />
         </div>

@@ -164,6 +164,11 @@
           "description": "Fiyatları ve ürünleri yeniden baskı olmadan yönetin."
         }
       },
+      "appInterfaceAlt": "WeeMenu uygulama arayüzü",
+      "qrBadge": "QR",
+      "liveMenuLabel": "Yayındaki menü",
+      "productCountSuffix": "ürün",
+      "categoryCountSuffix": "kategori",
       "stat1Label": "Menü Şablonları",
       "stat1Value": "Markaya uyumlu",
       "stat2Label": "Aktif Menüler",
@@ -180,7 +185,11 @@
       "step3Title": "Dışa Aktarın ve Paylaşın",
       "step3Description": "PDF olarak dışa aktarın veya müşterilerle anında paylaşmak için QR kodları oluşturun.",
       "step4Title": "Her Yerden Yönetin",
-      "step4Description": "Telefon, tablet veya bilgisayar gibi herhangi bir cihazdan panelinize erişin."
+      "step4Description": "Telefon, tablet veya bilgisayar gibi herhangi bir cihazdan panelinize erişin.",
+      "screen1Alt": "WeeMenu ürün ayarları ekranı",
+      "screen2Alt": "WeeMenu menü listesi ekranı",
+      "screen3Alt": "WeeMenu şablon ekranı",
+      "screen4Alt": "WeeMenu renk özelleştirme ekranı"
     },
     "features": {
       "label": "Özellikler",
@@ -231,7 +240,21 @@
       "viewMenu": "Menüyü Gör",
       "scanToOpen": "QR ile aç",
       "openInNewTab": "Yeni sekmede aç",
-      "counts": "{categories} kategori • {products} ürün"
+      "counts": "{categories} kategori • {products} ürün",
+      "categoryCount": "kategori",
+      "productCount": "ürün"
+    },
+    "download": {
+      "title": "WeeMenu'yu hemen deneyin",
+      "description": "Dakikalar içinde dijital menünüzü oluşturun, yayınlayın ve misafirlerinize modern bir QR menü deneyimi sunun.",
+      "buttonText": "WeeMenu'yu Aç",
+      "stat1": "Tema seçeneği",
+      "stat2": "Yayınlanan menü",
+      "stat3": "Mobil uyum",
+      "primaryCardAlt": "Burger menü önizlemesi",
+      "primaryCardTitle": "Klasik Burger",
+      "secondaryCardAlt": "Klasik menü önizlemesi",
+      "secondaryCardTitle": "Klasik Tabak"
     },
     "faq": {
       "label": "SSS",

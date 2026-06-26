@@ -185,6 +185,11 @@
           "description": "Меняйте цены и товары без повторной печати."
         }
       },
+      "appInterfaceAlt": "Интерфейс приложения WeeMenu",
+      "qrBadge": "QR",
+      "liveMenuLabel": "Живое меню",
+      "productCountSuffix": "товаров",
+      "categoryCountSuffix": "категорий",
       "stat1Label": "Шаблоны меню",
       "stat1Value": "Готово к бренду",
       "stat2Label": "Активные меню",
@@ -201,7 +206,11 @@
       "step3Title": "Экспорт и обмен",
       "step3Description": "Экспортируйте в PDF или создайте QR-коды для мгновенного обмена с клиентами.",
       "step4Title": "Управляйте везде",
-      "step4Description": "Получайте доступ к панели с любого устройства - телефона, планшета или компьютера."
+      "step4Description": "Получайте доступ к панели с любого устройства - телефона, планшета или компьютера.",
+      "screen1Alt": "Экран настроек продуктов WeeMenu",
+      "screen2Alt": "Экран списка меню WeeMenu",
+      "screen3Alt": "Экран шаблонов WeeMenu",
+      "screen4Alt": "Экран настройки цветов WeeMenu"
     },
     "features": {
       "label": "Функции",
@@ -252,7 +261,21 @@
       "viewMenu": "Открыть меню",
       "scanToOpen": "Сканировать, чтобы открыть",
       "openInNewTab": "Откроется в новой вкладке",
-      "counts": "{categories} категорий • {products} товаров"
+      "counts": "{categories} категорий • {products} товаров",
+      "categoryCount": "категорий",
+      "productCount": "товаров"
+    },
+    "download": {
+      "title": "Попробуйте WeeMenu уже сегодня",
+      "description": "Создайте, опубликуйте и покажите своё цифровое меню за считанные минуты с современным QR-опытом для гостей.",
+      "buttonText": "Открыть WeeMenu",
+      "stat1": "Варианты тем",
+      "stat2": "Опубликованные меню",
+      "stat3": "Адаптация под мобильные",
+      "primaryCardAlt": "Превью бургер-меню",
+      "primaryCardTitle": "Классический бургер",
+      "secondaryCardAlt": "Превью классического меню",
+      "secondaryCardTitle": "Классическое блюдо"
     },
     "faq": {
       "label": "FAQ",

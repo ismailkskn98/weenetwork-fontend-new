@@ -6,6 +6,7 @@ import MotionScrollInView from "@/components/site/common/motionScrollInView";
 import SectionLabel from "@/components/site/home/sectionLabel";
 
 import ThemePreview from "./themePreview";
+import Image from "next/image";
 
 const DEVICES = [
   { key: "device1", icon: Monitor },
@@ -17,8 +18,9 @@ export default async function DashboardAccessSection() {
   const translations = await getTranslations("WeeMenu.dashboardAccess");
 
   return (
-    <section id="dashboard-access" className="fluid overflow-hidden bg-black py-14 sm:py-16 lg:py-20 2xl:py-24 my-4">
-      <div className="gridContainer">
+    <section id="dashboard-access" className="fluid relative overflow-hidden bg-black py-14 sm:py-16 lg:py-20 2xl:py-24 my-4">
+      <div className="absolute inset-0 z-0 bg-[url('/images/weemenu/bg-B0WG-dy.png')] bg-repeat bg-fixed opacity-[0.15]" />
+      <div className="gridContainer relative z-20">
         <MotionScrollInView>
           <div className="grid gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] md:items-center lg:gap-8 xl:gap-11 2xl:gap-14">
             <div className="max-w-lg lg:max-w-none lg:py-2 xl:max-w-xl md:mx-auto lg:mx-0 md:text-center lg:text-start">

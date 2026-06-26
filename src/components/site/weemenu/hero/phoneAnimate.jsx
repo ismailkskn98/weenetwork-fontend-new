@@ -1,11 +1,10 @@
 "use client";
-import React from "react";
 import { motion } from "framer-motion";
 import MotionScrollInView from "../../common/motionScrollInView";
 import Image from "next/image";
 import { getMenuDisplayImage } from "@/lib/weemenu";
 
-export default function PhoneAnimate({ backgroundCard, textCard, sideBackgroundCard, logoCard }) {
+export default function PhoneAnimate({ backgroundCard, textCard, sideBackgroundCard, logoCard, labels }) {
   const floatingMotion = (delay = 0) => ({
     animate: {
       x: [0, 5, -4, 3, 0],
@@ -33,7 +32,7 @@ export default function PhoneAnimate({ backgroundCard, textCard, sideBackgroundC
                 <div className="relative h-full w-full overflow-hidden rounded-[2rem] bg-black lg:rounded-[2.25rem] 2xl:rounded-[2.5rem]">
                   <Image
                     src="/images/weemenu/hero-menu-example.webp"
-                    alt="WeeMenu App Interface"
+                    alt={labels.appInterfaceAlt}
                     fill
                     sizes="(max-width: 640px) 75vw, (max-width: 1024px) 280px, (max-width: 1536px) 320px, 370px"
                     className="object-cover object-center"
@@ -53,7 +52,7 @@ export default function PhoneAnimate({ backgroundCard, textCard, sideBackgroundC
                   </div>
                   <div className="mt-2 flex items-center justify-between gap-2 xl:mt-3 xl:gap-3">
                     <p className="line-clamp-1 text-xs font-semibold text-page-foreground xl:text-sm">{backgroundCard.name}</p>
-                    <span className="rounded-full bg-brand-orange/10 px-2 py-0.5 text-2xs font-semibold text-brand-orange xl:px-2.5 xl:py-1 xl:text-caption">QR</span>
+                    <span className="rounded-full bg-brand-orange/10 px-2 py-0.5 text-2xs font-semibold text-brand-orange xl:px-2.5 xl:py-1 xl:text-caption">{labels.qrBadge}</span>
                   </div>
                 </motion.div>
               ) : null}
@@ -63,9 +62,11 @@ export default function PhoneAnimate({ backgroundCard, textCard, sideBackgroundC
                   {...floatingMotion(1.2)}
                   className="rounded-[20px] border border-black/6 bg-page-foreground px-4 py-3 text-white shadow-[0_18px_50px_rgba(15,23,42,0.16)] xl:rounded-[24px] xl:px-5 xl:py-4"
                 >
-                  <p className="text-2xs uppercase tracking-[0.18em] text-white/55 xl:text-caption">Yayındaki menü</p>
+                  <p className="text-2xs uppercase tracking-[0.18em] text-white/55 xl:text-caption">{labels.liveMenuLabel}</p>
                   <p className="mt-2 line-clamp-2 text-base font-semibold leading-tight xl:mt-3 xl:text-lg">{textCard.name}</p>
-                  <p className="mt-2 text-xs text-white/70 xl:mt-3 xl:text-sm">{textCard.products_count || 0}+ ürün</p>
+                  <p className="mt-2 text-xs text-white/70 xl:mt-3 xl:text-sm">
+                    {textCard.products_count || 0}+ {labels.productCountSuffix}
+                  </p>
                 </motion.div>
               ) : null}
             </div>
@@ -83,9 +84,11 @@ export default function PhoneAnimate({ backgroundCard, textCard, sideBackgroundC
             <div className="absolute bottom-[14%] left-[4%] z-20 w-[52%] max-w-[220px] sm:bottom-[12%] sm:left-[6%] sm:w-[44%] lg:hidden">
               {textCard ? (
                 <motion.div {...floatingMotion(0.5)} className="rounded-[24px] border border-black/6 bg-page-foreground px-4 py-4 text-white shadow-[0_18px_50px_rgba(15,23,42,0.18)]">
-                  <p className="text-caption uppercase tracking-[0.18em] text-white/55">WeeMenu</p>
+                  <p className="text-caption uppercase tracking-[0.18em] text-white/55">{labels.liveMenuLabel}</p>
                   <p className="mt-2 line-clamp-2 text-base font-semibold leading-tight">{textCard.name}</p>
-                  <p className="mt-2 text-xs text-white/70">{textCard.products_count || 0}+ ürün</p>
+                  <p className="mt-2 text-xs text-white/70">
+                    {textCard.products_count || 0}+ {labels.productCountSuffix}
+                  </p>
                 </motion.div>
               ) : null}
             </div>
@@ -99,7 +102,9 @@ export default function PhoneAnimate({ backgroundCard, textCard, sideBackgroundC
                     </div>
                     <div className="min-w-0">
                       <p className="line-clamp-1 text-xs font-semibold text-page-foreground">{logoCard.name}</p>
-                      <p className="mt-0.5 text-caption text-text-muted">{logoCard.categories_count || 0}+ kategori</p>
+                      <p className="mt-0.5 text-caption text-text-muted">
+                        {logoCard.categories_count || 0}+ {labels.categoryCountSuffix}
+                      </p>
                     </div>
                   </div>
                 </motion.div>
@@ -115,7 +120,9 @@ export default function PhoneAnimate({ backgroundCard, textCard, sideBackgroundC
                     </div>
                     <div className="min-w-0">
                       <p className="line-clamp-1 text-xs font-semibold text-page-foreground xl:text-sm">{logoCard.name}</p>
-                      <p className="mt-0.5 text-2xs text-text-muted xl:mt-1 xl:text-xs">{logoCard.categories_count || 0}+ kategori</p>
+                      <p className="mt-0.5 text-2xs text-text-muted xl:mt-1 xl:text-xs">
+                        {logoCard.categories_count || 0}+ {labels.categoryCountSuffix}
+                      </p>
                     </div>
                   </div>
                 </motion.div>

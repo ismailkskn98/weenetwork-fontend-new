@@ -164,6 +164,11 @@
           "description": "Qiymət və məhsulları yenidən çap olmadan idarə edin."
         }
       },
+      "appInterfaceAlt": "WeeMenu tətbiq interfeysi",
+      "qrBadge": "QR",
+      "liveMenuLabel": "Canlı menyu",
+      "productCountSuffix": "məhsul",
+      "categoryCountSuffix": "kateqoriya",
       "stat1Label": "Menyu Şablonları",
       "stat1Value": "Brendə uyğun",
       "stat2Label": "Aktiv Menyular",
@@ -180,7 +185,11 @@
       "step3Title": "İxrac Edin və Paylaşın",
       "step3Description": "PDF kimi ixrac edin və ya müştərilərlə dərhal paylaşmaq üçün QR kodları yaradın.",
       "step4Title": "Hər Yerdən İdarə Edin",
-      "step4Description": "Telefon, tablet və ya kompüter kimi hər hansı cihazdan panelinə daxil olun."
+      "step4Description": "Telefon, tablet və ya kompüter kimi hər hansı cihazdan panelinə daxil olun.",
+      "screen1Alt": "WeeMenu məhsul ayarları ekranı",
+      "screen2Alt": "WeeMenu menyu siyahısı ekranı",
+      "screen3Alt": "WeeMenu şablon ekranı",
+      "screen4Alt": "WeeMenu rəng fərdiləşdirmə ekranı"
     },
     "features": {
       "label": "Xüsusiyyətlər",
@@ -231,7 +240,21 @@
       "viewMenu": "Menyunu Gör",
       "scanToOpen": "QR ilə aç",
       "openInNewTab": "Yeni tabda açılır",
-      "counts": "{categories} kateqoriya • {products} məhsul"
+      "counts": "{categories} kateqoriya • {products} məhsul",
+      "categoryCount": "kateqoriya",
+      "productCount": "məhsul"
+    },
+    "download": {
+      "title": "WeeMenu-nu indi sınayın",
+      "description": "Rəqəmsal menyunuzu bir neçə dəqiqəyə yaradın, yayımlayın və qonaqlara müasir QR menyu təcrübəsi təqdim edin.",
+      "buttonText": "WeeMenu-nu Aç",
+      "stat1": "Tema seçimi",
+      "stat2": "Yayımlanan menyu",
+      "stat3": "Mobil uyğunluq",
+      "primaryCardAlt": "Burger menyu önizləməsi",
+      "primaryCardTitle": "Klassik Burger",
+      "secondaryCardAlt": "Klassik menyu önizləməsi",
+      "secondaryCardTitle": "Klassik yemək"
     },
     "faq": {
       "label": "SSS",

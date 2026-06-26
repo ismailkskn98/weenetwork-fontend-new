@@ -93,7 +93,19 @@ export default async function HeroSection() {
           </div>
         </MotionScrollInView>
 
-        <PhoneAnimate backgroundCard={backgroundCard} textCard={textCard} sideBackgroundCard={sideBackgroundCard} logoCard={logoCard} />
+        <PhoneAnimate
+          backgroundCard={backgroundCard}
+          textCard={textCard}
+          sideBackgroundCard={sideBackgroundCard}
+          logoCard={logoCard}
+          labels={{
+            appInterfaceAlt: translations("appInterfaceAlt"),
+            qrBadge: translations("qrBadge"),
+            liveMenuLabel: translations("liveMenuLabel"),
+            productCountSuffix: translations("productCountSuffix"),
+            categoryCountSuffix: translations("categoryCountSuffix"),
+          }}
+        />
       </div>
     </section>
   );

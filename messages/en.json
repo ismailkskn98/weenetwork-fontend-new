@@ -164,6 +164,11 @@
           "description": "Edit prices and products without reprinting."
         }
       },
+      "appInterfaceAlt": "WeeMenu app interface",
+      "qrBadge": "QR",
+      "liveMenuLabel": "Live menu",
+      "productCountSuffix": "products",
+      "categoryCountSuffix": "categories",
       "stat1Label": "Menu Templates",
       "stat1Value": "Brand-ready layouts",
       "stat2Label": "Active Menus",
@@ -180,7 +185,11 @@
       "step3Title": "Export & Share",
       "step3Description": "Export to PDF or generate QR codes for instant sharing with customers.",
       "step4Title": "Manage Anywhere",
-      "step4Description": "Access your dashboard from any device - phone, tablet, or computer."
+      "step4Description": "Access your dashboard from any device - phone, tablet, or computer.",
+      "screen1Alt": "WeeMenu product settings screen",
+      "screen2Alt": "WeeMenu menu list screen",
+      "screen3Alt": "WeeMenu template screen",
+      "screen4Alt": "WeeMenu color customization screen"
     },
     "features": {
       "label": "Features",
@@ -231,7 +240,21 @@
       "viewMenu": "View Menu",
       "scanToOpen": "Scan to open",
       "openInNewTab": "Opens in a new tab",
-      "counts": "{categories} categories • {products} products"
+      "counts": "{categories} categories • {products} products",
+      "categoryCount": "categories",
+      "productCount": "products"
+    },
+    "download": {
+      "title": "Try WeeMenu today",
+      "description": "Create, publish, and share your digital menu in minutes with a polished QR menu experience for your guests.",
+      "buttonText": "Open WeeMenu",
+      "stat1": "Theme options",
+      "stat2": "Published menus",
+      "stat3": "Mobile friendly",
+      "primaryCardAlt": "Burger menu preview",
+      "primaryCardTitle": "Classic Burger",
+      "secondaryCardAlt": "Classic menu preview",
+      "secondaryCardTitle": "Classic Dish"
     },
     "faq": {
       "label": "FAQ",

@@ -25,22 +25,22 @@ export default async function DownloadSection() {
                 <div className="relative mx-auto aspect-[3/4] max-w-[280px] overflow-hidden rounded-[2.5rem] bg-brand-orange p-6 sm:max-w-sm sm:rounded-[3rem] sm:p-8 lg:max-w-[300px] xl:max-w-sm">
                   <Image
                     src="/images/weeMenuBurger.webp"
-                    alt="Delicious Burger"
+                    alt={translations("primaryCardAlt")}
                     fill
                     sizes="(max-width: 640px) 280px, (max-width: 1024px) 300px, 384px"
                     className="object-cover object-center"
                   />
                   <div className="absolute bottom-6 left-6 right-6 rounded-2xl bg-white/95 p-3 backdrop-blur-sm sm:bottom-8 sm:left-8 sm:right-8 sm:p-4">
                     <p className="text-xl font-bold text-page-foreground sm:text-2xl">$12.99</p>
-                    <p className="text-sm text-text-muted">Classic Burger</p>
+                    <p className="text-sm text-text-muted">{translations("primaryCardTitle")}</p>
                   </div>
                 </div>
 
                 <div className="absolute -right-2 top-1/2 hidden aspect-[3/4] max-w-[220px] -translate-y-1/2 overflow-hidden rounded-[2.5rem] bg-white p-5 shadow-2xl lg:block xl:max-w-[260px] xl:rounded-[3rem] xl:p-6 2xl:-right-4 2xl:max-w-[280px]">
-                  <Image src="/images/weeMenuClassic.webp" alt="Classic Menu" fill sizes="(max-width: 1280px) 220px, 280px" className="object-cover object-center" />
+                  <Image src="/images/weeMenuClassic.webp" alt={translations("secondaryCardAlt")} fill sizes="(max-width: 1280px) 220px, 280px" className="object-cover object-center" />
                   <div className="absolute bottom-5 left-5 right-5 xl:bottom-6 xl:left-6 xl:right-6">
                     <p className="text-base font-bold text-page-foreground xl:text-lg">$8.50</p>
-                    <p className="text-caption text-text-muted">Classic Dish</p>
+                    <p className="text-caption text-text-muted">{translations("secondaryCardTitle")}</p>
                   </div>
                 </div>
               </div>

@@ -65,14 +65,13 @@ export default function SampleMenusCarousel({ items, translations }) {
       <Swiper
         modules={[Navigation, A11y]}
         onBeforeInit={(swiper) => {
-          swiper.params.navigation.prevEl = prevRef.current;
-          swiper.params.navigation.nextEl = nextRef.current;
+          if (swiper.params.navigation && typeof swiper.params.navigation !== "boolean") {
+            swiper.params.navigation.prevEl = prevRef.current;
+            swiper.params.navigation.nextEl = nextRef.current;
+          }
         }}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-        navigation={{
-          prevEl: prevRef.current,
-          nextEl: nextRef.current,
-        }}
+        navigation
         spaceBetween={16}
         slidesPerView={1.08}
         breakpoints={{
@@ -147,8 +146,12 @@ export default function SampleMenusCarousel({ items, translations }) {
                         <p className="mt-4 line-clamp-2 text-base sm:text-lg font-semibold leading-tight text-white">{menu.name}</p>
 
                         <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
-                          <span className="rounded-full border border-white/6 bg-white/15 px-3 py-1.5 text-caption font-medium text-white">{menu.categories_count ?? 0} kategori</span>
-                          <span className="rounded-full border border-white/6 bg-white/15 px-3 py-1.5 text-caption font-medium text-white">{menu.products_count ?? 0} urun</span>
+                          <span className="rounded-full border border-white/6 bg-white/15 px-3 py-1.5 text-caption font-medium text-white">
+                            {menu.categories_count ?? 0} {translations.categoryCount}
+                          </span>
+                          <span className="rounded-full border border-white/6 bg-white/15 px-3 py-1.5 text-caption font-medium text-white">
+                            {menu.products_count ?? 0} {translations.productCount}
+                          </span>
                         </div>
                       </div>
                     </div>

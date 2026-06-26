@@ -8,7 +8,7 @@ import SectionLabel from "@/components/site/home/sectionLabel";
 import MotionScrollInView from "@/components/site/common/motionScrollInView";
 import PhoneScreenCarousel from "./phoneScreenCarousel";
 
-function OrbitCards({ steps }) {
+function OrbitCards({ steps, screenAlts }) {
   const rootRef = useRef(null);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ function OrbitCards({ steps }) {
           <div className="relative aspect-9/19 h-[min(52dvh,560px)] w-auto sm:h-[min(56dvh,600px)] lg:h-auto lg:w-[46%] lg:max-w-[220px] xl:max-w-[260px] 2xl:max-w-[300px] rounded-[2.5rem] bg-gray-900 p-1.5 shadow-2xl ring-1 ring-gray-200 lg:rounded-[2.75rem] lg:p-2 2xl:rounded-[2.75rem]">
             <div className="absolute left-1/2 top-2.5 h-6 w-24 -translate-x-1/2 rounded-full bg-black/70 lg:top-3 lg:h-7 lg:w-32" />
             <div className="absolute inset-1.5 overflow-hidden rounded-[2rem] bg-white lg:inset-2 lg:rounded-[2.25rem]">
-              <PhoneScreenCarousel />
+              <PhoneScreenCarousel screenAlts={screenAlts} />
             </div>
           </div>
         </div>
@@ -107,6 +107,11 @@ export default function HowItWorksSection() {
     [translations],
   );
 
+  const screenAlts = useMemo(
+    () => [translations("screen1Alt"), translations("screen2Alt"), translations("screen3Alt"), translations("screen4Alt")],
+    [translations],
+  );
+
   return (
     <section id="how-it-works" className="weemenu-section overflow-hidden bg-white">
       <div className="gridContainer">
@@ -117,7 +122,7 @@ export default function HowItWorksSection() {
         </MotionScrollInView>
 
         <div className="hidden lg:block">
-          <OrbitCards steps={steps} />
+          <OrbitCards steps={steps} screenAlts={screenAlts} />
         </div>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:hidden">
