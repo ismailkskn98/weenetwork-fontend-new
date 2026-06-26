@@ -26,7 +26,7 @@ export default function PhoneAnimate({ backgroundCard, textCard, sideBackgroundC
       <div className="relative mx-auto w-full max-w-[600px] lg:max-w-[420px] xl:max-w-[500px] 2xl:max-w-[600px]">
         <div className="relative">
           <div className="flex justify-center">
-            <div className="relative z-10 mx-auto aspect-9/19 h-[min(62dvh,700px)] w-auto sm:h-[min(66dvh,720px)] lg:h-auto lg:w-[52%] lg:max-w-[260px] xl:w-[54%] xl:max-w-[310px] 2xl:w-[58%] 2xl:max-w-[370px]">
+            <div className="relative z-10 mx-auto aspect-9/19 w-[min(72vw,300px)] shrink-0 sm:w-[min(68vw,340px)] lg:w-[52%] lg:max-w-[260px] xl:w-[54%] xl:max-w-[310px] 2xl:w-[58%] 2xl:max-w-[370px]">
               <div className="relative h-full w-full rounded-[2.5rem] bg-[#101010] p-1.5 ring-1 ring-black/8 lg:rounded-[2.75rem] lg:p-2 2xl:rounded-[3rem]">
                 <div className="absolute left-1/2 top-2.5 z-10 h-6 w-24 -translate-x-1/2 rounded-full bg-black/80 lg:top-3 lg:h-7 lg:w-30" />
                 <div className="relative h-full w-full overflow-hidden rounded-[2rem] bg-black lg:rounded-[2.25rem] 2xl:rounded-[2.5rem]">

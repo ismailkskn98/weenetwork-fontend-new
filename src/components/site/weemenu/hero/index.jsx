@@ -40,7 +40,7 @@ export default async function HeroSection() {
   ];
 
   return (
-    <section className="fluid gridContainer relative isolate overflow-x-hidden pb-14 pt-8 sm:pb-16 sm:pt-14 lg:pb-20 lg:pt-12 xl:pt-14 2xl:pb-24 2xl:pt-18">
+    <section className="fluid gridContainer relative isolate overflow-x-hidden pb-2 pt-8 sm:pb-16 sm:pt-14 lg:pb-20 lg:pt-12 xl:pt-14 2xl:pb-24 2xl:pt-18">
       <MotionScrollInViewOpacity className="fluid absolute inset-0 -z-10 pointer-events-none opacity-25! rotate-180">
         <video autoPlay muted loop playsInline className="fluid absolute inset-x-0 top-0 z-0 w-full h-full object-cover object-[50%_30%]">
           <source src="/videos/hero-video.mp4" type="video/mp4" />
